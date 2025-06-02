@@ -13,26 +13,30 @@
           <img class="logoim" src="./images/logo.svg" />
         </div>
         <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
-          <span class="hamburger"></span>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </button>
       </header>
       <div id="overlay" class="overlay">
         <nav class="overlay-nav">
           <a href="#" class="overlay-link">
-            <span class="link-text">Штаб-квартира</span>
-            <span class="link-arrow">→</span>
+            <div class="link-text">Штаб-квартира</div>
+            <div class="link-arrow">→</div>
           </a>
           <a href="#" class="overlay-link">
-            <span class="link-text">Мероприятия</span>
-            <span class="link-arrow">→</span>
+            <div class="link-text">Мероприятия</div>
+            <div class="link-arrow">→</div>
           </a>
           <a href="#" class="overlay-link">
-            <span class="link-text">Магазин</span>
-            <span class="link-arrow">→</span>
+            <div class="link-text">Магазин</div>
+            <div class="link-arrow">→</div>
           </a>
           <a href="#" class="overlay-link">
-            <span class="link-text">Купить билеты</span>
-            <span class="link-arrow">→</span>
+            <div class="link-text">Купить билеты</div>
+            <div class="link-arrow">→</div>
           </a>
         </nav>
       </div>
@@ -59,8 +63,39 @@
           <h1>Quark</h1>
         </div>
       </div>
+      <canvas id="draw"></canvas>
     </section>
-    <canvas id="draw"></canvas>
     <script src="./javascripts/index.js"></script>
+    <!-- <section class="second_screen">
+      <div class="container">
+        <div class="row">
+          <div class="image-container">
+            <img src="./images/img1.png" alt="Изображение 1" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="image-container">
+            <img src="./images/img2.png" alt="Изображение 2" />
+          </div>
+          <div class="text-container">Наша</div>
+          <div class="text-container">миссия</div>
+          <div class="text-container">—</div>
+          <div class="image-container">
+            <img src="./images/img3.png" alt="Изображение 3" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="image-container">
+            <img src="./images/img4.png" alt="Изображение 4" />
+          </div>
+          <div class="text-container">Мы изучаем подводный микромир</div>
+          <div class="text-container">продвигать</div>
+          <div class="text-container">науку</div>
+          <div class="image-container">
+            <img src="./images/img5.png" alt="Изображение 5" />
+          </div>
+        </div>
+      </div>
+    </section> -->
   </body>
 </html>
