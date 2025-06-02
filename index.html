@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheet/style.css" />
+    <title>WebsiteQUARK</title>
+  </head>
+  <body>
+    <section class="first_screen">
+      <header class="site-header">
+        <div class="logo">
+          <img class="logoim" src="./images/logo.svg" />
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+          <span class="hamburger"></span>
+        </button>
+      </header>
+      <div id="overlay" class="overlay">
+        <nav class="overlay-nav">
+          <a href="#" class="overlay-link">
+            <span class="link-text">Штаб-квартира</span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="#" class="overlay-link">
+            <span class="link-text">Мероприятия</span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="#" class="overlay-link">
+            <span class="link-text">Магазин</span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a href="#" class="overlay-link">
+            <span class="link-text">Купить билеты</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </nav>
+      </div>
+      <!-- <div id="overlay" class="overlay">
+        <nav class="overlay-nav">
+          <a href="#" class="overlay-link">Штаб-квартира <span>→</span></a>
+          <a href="#" class="overlay-link">Мероприятия <span>→</span></a>
+          <a href="#" class="overlay-link">Магазин <span>→</span></a>
+          <a href="#" class="overlay-link">Купить билеты <span>→</span></a>
+        </nav>
+      </div> -->
+
+      <div class="site-content">
+        <video autoplay muted loop id="heroVideo">
+          <source
+            src="./video/video_2025-05-23_15-10-17.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="container">
+        <div class="hero-copy">
+          <h1>Quark</h1>
+        </div>
+      </div>
+    </section>
+    <canvas id="draw"></canvas>
+    <script src="./javascripts/index.js"></script>
+  </body>
+</html>
