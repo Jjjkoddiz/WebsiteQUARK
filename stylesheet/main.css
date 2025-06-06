@@ -200,15 +200,14 @@ a {
 .overlay-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1.3vw;
   max-width: 90vw;
   padding: 2vw;
 }
 
 .overlay-link {
-  display: inline-flex;
-  padding: 1vw 2.2vw;
+  display: flex;
+  padding: 1vw 1.8vw;
   background: #4a4a4a;
   color: #eeeeee;
   font-family: sans-serif;
@@ -218,16 +217,18 @@ a {
   transition: all 0.3s ease;
   min-width: 18vw;
   box-sizing: border-box;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .link-text {
   flex-grow: 1;
+  padding-right: 1vw; /* Отступ между текстом и стрелкой */
 }
 
 .link-arrow {
-  margin-left: 2vw;
+  padding-right: 1vw;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .overlay-link:hover {
@@ -257,7 +258,8 @@ a {
   }
 
   .link-arrow {
-    margin-left: 3vw;
+    width: 2vw;
+    margin-left: 2vw;
   }
 
   .overlay-link:hover {
