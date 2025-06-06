@@ -46,7 +46,7 @@ a {
 .img {
   /* Ширина и высота вычисляются относительно высоты видового экрана (vh) */
   width: calc(150 / 206 * (20vh)); /* Подгоняем ширину под высоту */
-  height: 20vh; /*  Высота 20% от высоты видового экрана */
+  height: 20vh;
 }
 
 .img img {
@@ -113,70 +113,70 @@ a {
   margin-left: calc(731 / 1920 * 100vw);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .img {
-    width: calc(339 / 720 * 100vw);
-    height: calc(477 / 720 * 100vw);
+    width: calc(339 / 768 * 100vw);
+    height: calc(477 / 768 * 100vw);
   }
 
   /* Ряд 1 */
   .row:nth-child(1) {
-    top: calc(170 / 720 * 100vw);
-    left: calc(36 / 720 * 100vw);
+    top: calc(170 / 768 * 100vw);
+    left: calc(36 / 768 * 100vw);
   }
 
   .row:nth-child(1) .img:nth-child(2) {
-    margin-left: calc(10 / 720 * 100vw);
+    margin-left: calc(10 / 768 * 100vw);
   }
 
   /* Ряд 2 */
   .row:nth-child(2) {
-    top: calc(677 / 720 * 100vw);
-    left: calc(36 / 720 * 100vw);
+    top: calc(677 / 768 * 100vw);
+    left: calc(36 / 768 * 100vw);
   }
 
   .row:nth-child(2) .img:nth-child(2) {
-    margin-left: calc(22 / 720 * 100vw);
+    margin-left: calc(22 / 768 * 100vw);
   }
 
   /* Ряд 3 */
   .row:nth-child(3) {
-    top: calc(1184 / 720 * 100vw);
-    left: calc(36 / 720 * 100vw);
+    top: calc(1184 / 768 * 100vw);
+    left: calc(36 / 768 * 100vw);
   }
 
   .row:nth-child(3) .img:nth-child(2) {
-    margin-left: calc(22 / 720 * 100vw);
+    margin-left: calc(22 / 768 * 100vw);
   }
 
   /* Ряд 4 */
   .row:nth-child(4) {
-    top: calc(1691 / 720 * 100vw);
-    left: calc(36 / 720 * 100vw);
+    top: calc(1691 / 768 * 100vw);
+    left: calc(36 / 768 * 100vw);
   }
 
   .row:nth-child(4) .img:nth-child(2) {
-    margin-left: calc(22 / 720 * 100vw);
+    margin-left: calc(22 / 768 * 100vw);
   }
 
   /* Ряд 5 */
   .row:nth-child(5) {
-    top: calc(2198 / 720 * 100vw);
-    left: calc(36 / 720 * 100vw);
+    top: calc(2198 / 768 * 100vw);
+    left: calc(36 / 768 * 100vw);
   }
 
   .row:nth-child(5) .img:nth-child(2) {
-    margin-left: calc(22 / 720 * 100vw);
+    margin-left: calc(22 / 768 * 100vw);
   }
 
   /* Ряд 6 */
   .row:nth-child(6) {
-    top: calc(2705 / 720 * 100vw);
-    left: calc(36 / 720 * 100vw);
+    top: calc(2705 / 768 * 100vw);
+    left: calc(36 / 768 * 100vw);
   }
 
   .row:nth-child(6) .img:nth-child(2) {
-    margin-left: calc(22 / 720 * 100vw);
+    margin-left: calc(22 / 768 * 100vw);
   }
 }
 
@@ -246,13 +246,37 @@ a {
     margin-left: calc(22 / 480 * 100vw);
   }
 }
+.gallery-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  backdrop-filter: blur(10px); /* Добавляем размытие фона */
+}
 
-footer {
+/* Стили для активного изображения */
+.img img.active {
+  position: fixed;
+  z-index: 200;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  cursor: zoom-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+/* footer {
   position: absolute;
   top: 900px;
   width: 100%;
   height: 176px;
-  background-color: #f0f0f0;
+  background-color: #999999;
 }
 
 .footer-buttons {
@@ -288,7 +312,58 @@ footer {
   justify-content: space-between;
 }
 
-.link-arrow {
+.link-arrow2 {
   margin-right: 2.26vw;
   font-size: 1.56vw;
+} */
+
+footer {
+  position: absolute;
+  top: 58vw;
+  width: 100%;
+  height: 10vw;
+  background-color: #a9a9a9;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 3vw;
+  box-sizing: border-box;
+}
+
+.footer-button {
+  width: 17.5vw;
+  height: 3.39vw;
+  border: none;
+  cursor: pointer;
+  font-size: 1.04vw;
+  background: #8c8c8c;
+  color: #eeeeee;
+  border-radius: 999px;
+  margin-right: 7.8vw;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.footertext {
+  margin-left: 2vw;
+}
+
+.footer-buttons > *:last-child {
+  margin-right: 0; /* Убираем отступ у последней кнопки */
+}
+
+.with-arrow {
+  justify-content: space-between;
+  padding-right: 1.51vw; /* 29px / 1920px * 100vw */
+}
+
+.link-arrow2 {
+  margin-left: 3vw;
+  font-size: 1.04vw;
+  color: #fff;
 }
