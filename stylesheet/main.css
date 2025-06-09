@@ -11,10 +11,11 @@
 
 body {
   width: 100vw;
-  height: 100vh;
-  background-color: red;
+  background: #000000;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  color: #eeeeee;
 }
-
 h1 {
   font-family: 'HelveticaNeueCyr-Roman';
   font-size: 12vw;
@@ -43,7 +44,7 @@ h3 {
 
 h4 {
   font-family: 'HelveticaNeueCyr-Roman';
-  font-size: 2vw;
+  font-size: 1.04vw;
   color: #fff;
   font-weight: 400;
   line-height: 1.4;
@@ -55,52 +56,17 @@ canvas {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 
 .container {
   position: relative;
-  z-index: 1;
-  pointer-events: none;
+  z-index: 2;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.site-content {
-  position: absolute;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 2vw;
-}
-
-a {
-  text-decoration: none;
-  color: #eeeeee;
-  pointer-events: auto;
-}
-
-.hero-copy {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-.hero-copy h1 {
-  margin-top: 50%;
-}
-
-#heroVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .site-header {
@@ -112,7 +78,53 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 3;
+}
+
+.first_screen {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.site-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-copy {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-copy h1 {
+  margin-top: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: #eeeeee;
+  pointer-events: auto;
 }
 
 .menu-toggle {
@@ -131,8 +143,8 @@ a {
 }
 
 .hamburger {
-  width: 30px; /* Общая ширина гамбургера */
-  height: 20px; /* Общая высота гамбургера */
+  width: 30px;
+  height: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -176,6 +188,7 @@ a {
 .menu-toggle.open .line:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -189,7 +202,7 @@ a {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 9;
+  z-index: 3;
 }
 
 .overlay.show {
@@ -239,7 +252,6 @@ a {
   transform: translateX(0.3vw);
 }
 
-/* Адаптив для маленьких экранов */
 @media (max-width: 768px) {
   .overlay-nav {
     flex-direction: column;
@@ -277,94 +289,286 @@ a {
   }
 }
 
-/* .second_screen {
+.second_screen {
   position: relative;
-  z-index: 10;
   background: black;
   min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
+  z-index: 1;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+  position: relative;
   width: 100%;
-  max-width: 1200px;
-  padding: 1vw;
-  box-sizing: border-box;
 }
 
 .row {
+  position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-bottom: 1.5vw;
-}
-
-.image-container {
-  margin: 0 2vw;
+  transition: all 0.3s ease;
 }
 
 .image-container img {
-  width: 8vw;
-  height: auto;
+  width: 5.6vw;
+  height: 3.4vw;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.image-container img:hover {
-  transform: scale(1.5);
+.text-container {
+  font-size: 1vw;
+  white-space: nowrap;
+  transition: font-size 0.3s ease, transform 0.3s ease;
 }
 
-.text-container {
-  font-size: 1.5vw;
-  margin: 0 2vw;
-  text-align: center;
-  transition: font-size 0.3s ease;
+.multi-line {
+  white-space: normal;
+  line-height: 1;
+}
+
+.row-1 {
+  top: 8.5vw;
+  left: 50vw;
+  justify-content: flex-start;
+}
+
+.row-2 {
+  top: 20vw;
+  left: 15vw;
+  justify-content: flex-start;
+}
+
+.row-2 .image-container:nth-child(2) {
+  margin-left: 57vw;
+}
+
+.row-3 {
+  top: 32vw;
+  left: 28.5vw;
+  justify-content: flex-start;
+}
+
+.row-3 .text-container:nth-child(2) {
+  margin-left: 11.8vw;
+}
+
+.row-3 .text-container:nth-child(3) {
+  margin-left: 14vw;
+}
+
+.row-4 {
+  top: 48vw;
+  left: 28vw;
+  justify-content: flex-start;
+}
+
+.row-4 .text-container:nth-child(2) {
+  margin-left: 27.6vw;
+}
+
+.row-4 .text-container:nth-child(3) {
+  margin-left: 9.1vw;
+}
+
+.row-5 {
+  top: 60vw;
+  left: 15vw;
+  justify-content: flex-start;
+}
+
+.row-5 .image-container {
+  margin-left: 38.3vw;
+  top: -0.9vw;
+  position: relative;
+}
+
+.image-container img:hover {
+  transform: scale(3.1);
+  z-index: 2;
 }
 
 .text-container:hover {
+  font-size: 3.8vw;
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.multi-line:hover {
   font-size: 2vw;
+  transform: scale(1);
+  z-index: 2;
 }
 
-.text-container:nth-child(2) {
-  font-size: 3vw;
+.row-1 .image-container img:hover {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
+.row-2 .image-container img:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.row-3 .text-container:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.row-4 .image-container img:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.row-4 .text-container:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.row-5 .text-container:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.row-5 .image-container img:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* Адаптивность для экранов 768px и меньше */
 @media (max-width: 768px) {
-  .container {
-    padding: 2vw;
-  }
-
-  .row {
-    flex-direction: column;
-    margin-bottom: 2vw;
-  }
-
-  .image-container {
-    margin: 2vw 0;
-  }
-
-  .image-container img {
-    width: 12vw;
-  }
-
-  .image-container img:hover {
-    transform: scale(1.7);
+  img {
+    width: 15vw;
+    height: 7.5vw;
   }
 
   .text-container {
-    font-size: 2.5vw;
+    font-size: 2.2vw;
+  }
+
+  .row-1 {
+    top: 12vw;
+    left: 30vw;
+  }
+
+  .row-2 {
+    top: 30vw;
+    left: 10vw;
+  }
+
+  .row-2 .image-container:nth-child(2) {
+    margin-left: 50vw;
+  }
+
+  .row-3 {
+    top: 45vw;
+    left: 15vw;
+  }
+
+  .row-3 .text-container:nth-child(2) {
+    margin-left: 10vw;
+  }
+
+  .row-3 .text-container:nth-child(3) {
+    margin-left: 5vw;
+  }
+
+  .row-4 {
+    top: 60vw;
+    left: 15vw;
+  }
+
+  .row-4 .text-container:nth-child(2) {
+    margin-left: 25vw;
+  }
+
+  .row-4 .text-container:nth-child(3) {
+    margin-left: 5vw;
+  }
+
+  .row-5 {
+    top: 75vw;
+    left: 5vw;
+  }
+
+  .row-5 .image-container {
+    margin-left: 30vw;
+    top: 0vw;
+  }
+
+  .image-container img:hover {
+    transform: scale(3.1);
   }
 
   .text-container:hover {
-    font-size: 4vw;
+    font-size: 7vw;
+    transform: scale(3.1);
   }
+}
+footer {
+  margin-top: 5vw;
+  width: 100%;
+  height: 10vw;
+  background-color: #a9a9a9;
+  z-index: 1;
+}
 
-  .text-container:nth-child(2) {
-    font-size: 5vw;
-  }
-} */
+.footer-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 3vw;
+  box-sizing: border-box;
+}
+
+.footer-button {
+  width: 17.5vw;
+  height: 3.39vw;
+  border: none;
+  cursor: pointer;
+  background: #8c8c8c;
+  color: #eeeeee;
+  border-radius: 999px;
+  margin-right: 7.8vw;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footertext {
+  margin-left: 2vw;
+}
+
+.footer-buttons > *:last-child {
+  margin-right: 0;
+}
+
+.with-arrow {
+  justify-content: space-between;
+  padding-right: 1.51vw;
+}
+
+.link-arrow2 {
+  margin-left: 3vw;
+  font-size: 1.04vw;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #6a6a6a;
+  transform: translateY(-0.2vw);
+}
+
+.footer-button.with-arrow:hover .link-arrow2 {
+  transform: translateX(0.3vw);
+}
