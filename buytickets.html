@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheet/style.css" />
+    <script src="./javascripts/buytickets.js"></script>
+    <title>WebsiteQUARK</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="index.html">
+        <div class="logo">
+          <img class="logoim" src="./images/logo.svg" />
+        </div>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </button>
+    </header>
+    <div id="overlay" class="overlay">
+      <nav class="overlay-nav">
+        <a href="headquarters.html" class="overlay-link">
+          <div class="link-text">Штаб-квартира</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="events.html" class="overlay-link">
+          <div class="link-text">Мероприятия</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="shop.html" class="overlay-link">
+          <div class="link-text">Магазин</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="buytickets.html" class="overlay-link">
+          <div class="link-text">Купить билеты</div>
+          <div class="link-arrow">→</div>
+        </a>
+      </nav>
+    </div>
+
+    <section class="tickets-section">
+      <h2>Билеты</h2>
+      <p>Quark открыт с 10:00 по 20:00 со среды по воскресенье</p>
+
+      <div class="form-container">
+        <div class="form-row">
+          <input type="text" class="form-input" placeholder="Имя" />
+          <input type="text" class="form-input" placeholder="Фамилия" />
+        </div>
+        <select class="form-select">
+          <option value="" disabled selected>Страна</option>
+          <option value="Россия">Россия</option>
+          <option value="Беларусь">Беларусь</option>
+          <option value="Казахстан">Казахстан</option>
+          <option value="Другая страна">Другая страна</option>
+        </select>
+        <input type="email" class="form-input" placeholder="Email" />
+        <input type="text" class="form-input" placeholder="Дата" />
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <h2>Категории</h2>
+      <div class="category-row">
+        <span class="category-name">Взрослый</span>
+        <span class="category-price">900,00</span>
+        <div class="category-controls">
+          <button class="control-button">-</button>
+          <span class="category-count">0</span>
+          <button class="control-button">+</button>
+        </div>
+      </div>
+      <div class="category-row">
+        <span class="category-name"
+          >Пенсионер<br /><span class="category-subtext"
+            >65 и старше</span
+          ></span
+        >
+        <span class="category-price">600,00</span>
+        <div class="category-controls">
+          <button class="control-button">-</button>
+          <span class="category-count">0</span>
+          <button class="control-button">+</button>
+        </div>
+      </div>
+      <div class="category-row">
+        <span class="category-name"
+          >Студент<br /><span class="category-subtext"
+            >Включая иностранных студентов</span
+          ></span
+        >
+        <span class="category-price">300,00</span>
+        <div class="category-controls">
+          <button class="control-button">-</button>
+          <span class="category-count">0</span>
+          <button class="control-button">+</button>
+        </div>
+      </div>
+      <div class="category-row">
+        <span class="category-name">Детский</span>
+        <span class="category-price">200,00</span>
+        <div class="category-controls">
+          <button class="control-button">-</button>
+          <span class="category-count">0</span>
+          <button class="control-button">+</button>
+        </div>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="newsCheckbox" />
+        <label for="newsCheckbox"
+          >Получать новости о нашем турагентстве, о новых направлениях
+          путешествия, других нововведениях</label
+        >
+      </div>
+    </section>
+
+    <section class="payment-section">
+      <h2>Оплата</h2>
+      <div class="payment-form">
+        <input type="text" class="payment-input" placeholder="Номер карты" />
+        <div class="payment-row">
+          <input type="text" class="payment-input" placeholder="Дата/Год" />
+          <input type="text" class="payment-input" placeholder="CVV" />
+        </div>
+        <button class="payment-button">ОТПРАВИТЬ</button>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-buttons">
+        <button class="footer-button">
+          <h4 class="footertext">Бекетова Анастасия</h4>
+        </button>
+        <a
+          href="https://jjjkoddiz.github.io/LandingQUARK/"
+          class="footer-button with-arrow"
+        >
+          <h4 class="footertext">VR-tour</h4>
+          <span class="link-arrow2">→</span>
+        </a>
+        <a
+          href="https://jjjkoddiz.github.io/WebPosterQUARK/"
+          class="footer-button with-arrow"
+        >
+          <h4 class="footertext">Quark Web Poster</h4>
+          <span class="link-arrow2">→</span>
+        </a>
+        <button class="footer-button">
+          <h4 class="footertext">Б24дз08</h4>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>

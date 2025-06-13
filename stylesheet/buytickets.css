@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  background: #000000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #eeeeee;
+  pointer-events: auto;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.tickets-section {
+  position: relative;
+  height: 16.389vw;
+  margin-top: 6.944vw;
+}
+
+.tickets-section h2 {
+  font-size: 8.333vw;
+  margin-left: 10.417vw;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+}
+
+.tickets-section p {
+  position: absolute;
+  top: 26.042vw;
+  left: 10.833vw;
+  font-size: 1.111vw;
+}
+
+.form-container {
+  position: absolute;
+  top: 33.681vw;
+  left: 10.417vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3.611vw;
+}
+
+.form-row {
+  display: flex;
+  gap: 3.75vw;
+}
+
+.form-input,
+.form-select {
+  background: #333;
+  border: none;
+  border-radius: 0.694vw;
+  color: #fff;
+  font-size: 1.111vw;
+  padding: 0 1.389vw;
+  height: 3.958vw;
+  transition: background 0.3s;
+}
+
+.form-input:hover,
+.form-select:hover {
+  background: #444;
+}
+
+.form-input {
+  width: 18.125vw;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-select {
+  width: 40vw;
+  appearance: none;
+}
+
+.categories-section {
+  margin: 48.611vw 0 0 10.417vw;
+}
+
+.categories-section h2 {
+  font-size: 4.167vw;
+  margin-bottom: 2.083vw;
+}
+
+.category-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.389vw;
+  width: 41.667vw;
+}
+
+.category-name {
+  width: 17.361vw;
+  font-size: 1.667vw;
+  line-height: 1.3;
+}
+
+.category-subtext {
+  font-size: 1.111vw;
+  display: block;
+  margin-top: 0.347vw;
+}
+
+.category-price {
+  width: 6.944vw;
+  font-size: 1.667vw;
+  text-align: right;
+  margin-right: 1.389vw;
+}
+
+.category-controls {
+  display: flex;
+  align-items: center;
+}
+
+.control-button {
+  width: 2.083vw;
+  height: 2.083vw;
+  background: #333;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.389vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.control-button:hover {
+  background: #444;
+}
+
+.category-count {
+  font-size: 1.389vw;
+  margin: 0 0.694vw;
+  width: 2.083vw;
+  text-align: center;
+}
+
+.checkbox-container {
+  margin-top: 2.083vw;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 0.694vw;
+  width: 1.389vw;
+  height: 1.389vw;
+}
+
+/* Секция Оплата */
+.payment-section {
+  margin: 3.472vw 0 6.944vw 10.417vw;
+}
+
+.payment-section h2 {
+  font-size: 4.167vw;
+  margin-bottom: 2.083vw;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.389vw;
+  width: 40vw;
+}
+
+.payment-input {
+  background: #333;
+  border: none;
+  border-radius: 0.694vw;
+  color: #fff;
+  font-size: 1.111vw;
+  padding: 0 1.389vw;
+  height: 3.958vw;
+  transition: background 0.3s;
+}
+
+.payment-input:hover {
+  background: #444;
+}
+
+.payment-input::placeholder {
+  color: #999;
+}
+
+.payment-row {
+  display: flex;
+  gap: 3.75vw;
+}
+
+.payment-row .payment-input {
+  width: 18.125vw;
+}
+
+.payment-button {
+  background: #666;
+  border: none;
+  border-radius: 0.694vw;
+  color: #fff;
+  font-size: 1.25vw;
+  height: 4.167vw;
+  cursor: pointer;
+  margin-top: 2.083vw;
+  transition: background 0.3s;
+}
+
+.payment-button:hover {
+  background: #777;
+}
+footer {
+  margin-top: 5vw;
+  width: 100%;
+  height: 10vw;
+  background-color: #a9a9a9;
+  z-index: 1;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-left: 3vw;
+  box-sizing: border-box;
+}
+
+.footer-button {
+  width: 17.5vw;
+  height: 3.39vw;
+  border: none;
+  cursor: pointer;
+  background: #8c8c8c;
+  color: #eeeeee;
+  border-radius: 999px;
+  margin-right: 7.8vw;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footertext {
+  margin-left: 2vw;
+}
+
+.footer-buttons > *:last-child {
+  margin-right: 0;
+}
+
+.with-arrow {
+  justify-content: space-between;
+  padding-right: 1.51vw;
+}
+
+.link-arrow2 {
+  margin-left: 3vw;
+  font-size: 1.04vw;
+  color: #eeeeee;
+  transition: transform 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #6a6a6a;
+  transform: translateY(-0.2vw);
+}
+
+.footer-button.with-arrow:hover .link-arrow2 {
+  transform: translateX(0.3vw);
+}
