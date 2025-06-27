@@ -10,86 +10,340 @@
   </head>
   <body>
     <header class="site-header">
-        <a href="index.html">
-          <div class="logo">
-            <img class="logoim" src="./images/logo.svg" />
-          </div>
+      <a href="index.html">
+        <div class="logo">
+          <img class="logoim" src="./images/logo.svg" />
+        </div>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </button>
+    </header>
+    <div id="overlay" class="overlay">
+      <nav class="overlay-nav">
+        <a href="headquarters.html" class="overlay-link">
+          <div class="link-text">Штаб-квартира</div>
+          <div class="link-arrow">→</div>
         </a>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
-          <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </button>
-      </header>
-      <div id="overlay" class="overlay">
-        <nav class="overlay-nav">
-          <a href="headquarters.html" class="overlay-link">
-            <div class="link-text">Штаб-квартира</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="events.html" class="overlay-link">
-            <div class="link-text">Мероприятия</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="shop.html" class="overlay-link">
-            <div class="link-text">Магазин</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="buytickets.html" class="overlay-link">
-            <div class="link-text">Купить билеты</div>
-            <div class="link-arrow">→</div>
-          </a>
-        </nav>
-      </div>
+        <a href="events.html" class="overlay-link">
+          <div class="link-text">Мероприятия</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="shop.html" class="overlay-link">
+          <div class="link-text">Магазин</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="buytickets.html" class="overlay-link">
+          <div class="link-text">Купить билеты</div>
+          <div class="link-arrow">→</div>
+        </a>
+      </nav>
+    </div>
     <section class="first_screen">
       <div class="product-hero">
         <div class="product-title">
-            <h1>Очки</h1>
+          <h1>Очки</h1>
         </div>
         <div class="product-header">
-            <h3>
-                Высокотехнологичный инструмент <br> турагентства Quark. Специальная <br> оптика позволит в деталях <br> рассмотреть микромир
-            </h3>
+          <h3>
+            Высокотехнологичный инструмент <br />
+            турагентства Quark. Специальная <br />
+            оптика позволит в деталях <br />
+            рассмотреть микромир
+          </h3>
         </div>
         <div class="product-look">
-            <img src="./images/glasses.png" alt="">
-
+          <img src="./images/glassesbig.png" alt="" />
         </div>
       </div>
-      <!-- <div class="overlayshop"></div>
+      <div class="overlayshop"></div>
 
       <div class="product-description">
         <div class="desc">
-            <h4>Линзы с наноразмерным покрытием усиливают световые волны, создавая эффект многократного увеличения без искажений. Встроенный стабилизатор фокуса автоматически настраивается под ваше зрение.
-            </h4>
+          <h4>
+            Линзы с наноразмерным покрытием усиливают световые волны, создавая
+            эффект многократного увеличения без искажений. Встроенный
+            стабилизатор фокуса автоматически настраивается под ваше зрение.
+          </h4>
         </div>
         <div class="front-view">
-            <div class="sketch-img"><img src="./images/sketchimg.png" alt=""></div>
+          <div class="sketch-img">
+            <img src="./images/sketchimg.png" alt="" />
+          </div>
         </div>
-         <div class="side-view">
-            <div class="sketch-img"><img src="./images/sketchimg2.png" alt=""></div>
+        <div class="side-view">
+          <div class="sketch-img">
+            <img src="./images/sketchimg2.png" alt="" />
+          </div>
+        </div>
+        <div class="close-desc" id="close">
+          <img src="./images/icon.svg" alt="" />
         </div>
       </div>
-      <div class="close-desc" id="close">
-        <ion-icon name="close-sharp"></ion-icon>
-      </div> -->
       <div class="product-info">
         <div class="product-nav">
-            <div class="product-img">
-                <img src="./images/glass.png" alt="">
-            </div>
-            <div class="product-name">Очки</div>
-            <button class="product-cha">Характеристики</button>
-            <div class="product-cart">
-                <div class="product-price">27 178 ₽</div>
-                <button class="product-btn">Купить</button>  
-            </div>
+          <div class="product-img">
+            <img src="./images/glassessmall.png" alt="" />
+          </div>
+          <div class="product-name">Очки</div>
+          <button class="product-cha">Характеристики</button>
+          <div class="product-cart">
+            <div class="product-price">27 178 ₽</div>
+            <button class="product-btn">Купить</button>
+          </div>
         </div>
       </div>
-      <!-- <section class="second_screen">
+    </section>
+    <!-- <section class="second_screen">
+      <div class="product-hero">
+        <div class="product-title">
+          <h1>Камера</h1>
+        </div>
+        <div class="product-header">
+          <h3>
+            Автоматически фиксирует всё, <br />
+            что попадает в поле зрения <br />
+            владельца, создавая фото — <br />
+            и видеоматериалы
+          </h3>
+        </div>
+        <div class="product-lookcamera">
+          <img src="./images/camerabig.png" alt="" />
+        </div>
+      </div>
+      <div class="overlayshop"></div>
 
-      </section> -->
+      <div class="product-description">
+        <div class="desc">
+          <h4>
+            Линзы с наноразмерным покрытием усиливают световые волны, создавая
+            эффект многократного увеличения без искажений. Встроенный
+            стабилизатор фокуса автоматически настраивается под ваше зрение.
+          </h4>
+        </div>
+        <div class="front-view">
+          <div class="sketch-img">
+            <img src="./images/sketchimg.png" alt="" />
+          </div>
+        </div>
+        <div class="side-view">
+          <div class="sketch-img">
+            <img src="./images/sketchimg2.png" alt="" />
+          </div>
+        </div>
+        <div class="close-desc" id="close">
+          <img src="./images/icon.svg" alt="" />
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-nav">
+          <div class="product-img">
+            <img src="./images/camerasmall.png" alt="" />
+          </div>
+          <div class="product-name">Камера</div>
+          <button class="product-cha">Характеристики</button>
+          <div class="product-cart">
+            <div class="product-price">40 500 ₽</div>
+            <button class="product-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="second_screen">
+      <div class="product-hero">
+        <div class="product-title">
+          <h1>Камера</h1>
+        </div>
+        <div class="product-header">
+          <h3>
+            Автоматически фиксирует всё, <br />
+            что попадает в поле зрения <br />
+            владельца, создавая фото — <br />
+            и видеоматериалы
+          </h3>
+        </div>
+        <div class="product-lookcamera">
+          <img src="./images/camerabig.png" alt="" />
+        </div>
+      </div>
+      <div class="camera-overlayshop"></div>
+
+      <div class="camera-product-description">
+        <div class="camdesc">
+          <h4>
+            Встроенный процессор обрабатывает изображение <br />в реальном
+            времени, компенсируя вибрации <br />и артефакты движения, <br />для
+            получения кристально четких кадров.
+          </h4>
+        </div>
+        <div class="camfront-view">
+          <div class="camsketch-img">
+            <img src="./images/camerafront.png" alt="" />
+          </div>
+        </div>
+        <div class="camside-view">
+          <div class="camsketch-img">
+            <img src="./images/cameraside.png" alt="" />
+          </div>
+        </div>
+        <div class="camclose-desc" id="camera-close">
+          <img src="./images/icon.svg" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-nav">
+          <div class="product-img">
+            <img src="./images/camerasmall.png" alt="" />
+          </div>
+          <div class="product-name">Камера</div>
+          <button class="product-cha camera-cha">Характеристики</button>
+          <div class="product-cart">
+            <div class="product-price">40 500 ₽</div>
+            <button class="product-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="third_screen">
+      <div class="product-herobook">
+        <div class="product-images-container">
+          <img
+            src="./images/book1.png"
+            alt="Книга 1"
+            class="product-image active"
+          />
+          <img src="./images/book2.png" alt="Книга 2" class="product-image" />
+          <img src="./images/book3.png" alt="Книга 3" class="product-image" />
+          <img src="./images/book4.png" alt="Книга 4" class="product-image" />
+          <img src="./images/book5.png" alt="Книга 5" class="product-image" />
+          <img src="./images/book6.png" alt="Книга 5" class="product-image" />
+        </div>
+      </div>
+      <div class="book-overlayshop"></div>
+
+      <div class="book-product-description">
+        <div class="bookdesc">
+          <h4>
+            В путеводителе турагентства раскрываются все тайны захватывающих
+            путешествий в подводный микромир. Книга описывает используемый
+            транспорт, необычные устройства, а также организацию пространства
+            в здании.
+          </h4>
+        </div>
+        <div class="bookfront-view">
+          <div class="booksketch-img">
+            <img src="./images/bookfront.png" alt="" />
+          </div>
+        </div>
+        <div class="bookside-view">
+          <div class="booksketch-img">
+            <img src="./images/bookside.png" alt="" />
+          </div>
+        </div>
+        <div class="bookclose-desc" id="book-close">
+          <img src="./images/icon.svg" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="product-infobook">
+        <div class="product-nav">
+          <div class="product-img">
+            <img src="./images/booksmall.png" alt="" />
+          </div>
+          <div class="product-name">Книга</div>
+          <button class="product-cha book-cha">Характеристики</button>
+          <div class="product-cart">
+            <div class="product-price">5 000 ₽</div>
+            <button class="product-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fourth_screen">
+      <div class="product-hero">
+        <div class="product-title">
+          <h1>Фигурка</h1>
+        </div>
+        <div class="product-header">
+          <h3>
+            Не просто сувенир, а точная<br />
+            копия центрального здания, <br />
+            где организуются путешествия <br />
+            в подводный микромир
+          </h3>
+        </div>
+        <div class="product-lookfigure">
+          <img src="./images/figure.png" alt="" />
+        </div>
+      </div>
+      <div class="figure-overlayshop"></div>
+
+      <div class="figure-product-description">
+        <div class="figuredesc">
+          <h4>
+            Модель выполнена методом атомарно-точного цифрового сканирования
+            с последующей субнанометровой 3D-печатью, обеспечивая геометрически
+            корректное воспроизведение внешней структуры здания
+          </h4>
+        </div>
+        <div class="figurefront-view">
+          <div class="figuresketch-img">
+            <img src="./images/figurefront.png" alt="" />
+          </div>
+        </div>
+        <div class="figureside-view">
+          <div class="figuresketch-img">
+            <img src="./images/figureside.png" alt="" />
+          </div>
+        </div>
+        <div class="figureclose-desc" id="figure-close">
+          <img src="./images/icon.svg" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-nav">
+          <div class="product-img">
+            <img src="./images/figuresmall.png" alt="" />
+          </div>
+          <div class="product-name">Фигурка</div>
+          <button class="product-cha figure-cha">Характеристики</button>
+          <div class="product-cart">
+            <div class="product-price">10 000 ₽</div>
+            <button class="product-btn">Купить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-buttons">
+        <button class="footer-button">
+          <h4 class="footertext">Бекетова Анастасия</h4>
+        </button>
+        <a
+          href="https://jjjkoddiz.github.io/LandingQUARK/"
+          class="footer-button with-arrow"
+        >
+          <h4 class="footertext">VR-tour</h4>
+          <span class="link-arrow2">→</span>
+        </a>
+        <a
+          href="https://jjjkoddiz.github.io/WebPosterQUARK/"
+          class="footer-button with-arrow"
+        >
+          <h4 class="footertext">Quark Web Poster</h4>
+          <span class="link-arrow2">→</span>
+        </a>
+        <button class="footer-button">
+          <h4 class="footertext">Б24дз08</h4>
+        </button>
+      </div>
+    </footer>
   </body>
 </html>

@@ -295,9 +295,13 @@ a {
   z-index: 1;
 }
 
-.container {
+.containertwo {
   position: relative;
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 80vh;
 }
 
 .row {
