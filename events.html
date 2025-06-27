@@ -3,96 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Quark" />
+    <meta
+      property="og:description"
+      content="Промо-сайт турагентства по микромиру Quark"
+    />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./stylesheet/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="./javascripts/events.js"></script>
     <title>WebsiteQUARK</title>
   </head>
   <body>
-    <section class="first_screen">
-      <header class="site-header">
-        <a href="index.html">
-          <div class="logo">
-            <img class="logoim" src="./images/logo.svg" />
-          </div>
+    <header class="site-header">
+      <a href="index.html">
+        <div class="logo">
+          <img class="logoim" src="./images/logo.svg" />
+        </div>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </button>
+    </header>
+    <div id="overlay" class="overlay">
+      <nav class="overlay-nav">
+        <a href="headquarters.html" class="overlay-link">
+          <div class="link-text">Штаб-квартира</div>
+          <div class="link-arrow">→</div>
         </a>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
-          <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </button>
-      </header>
-      <div id="overlay" class="overlay">
-        <nav class="overlay-nav">
-          <a href="headquarters.html" class="overlay-link">
-            <div class="link-text">Штаб-квартира</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="events.html" class="overlay-link">
-            <div class="link-text">Мероприятия</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="shop.html" class="overlay-link">
-            <div class="link-text">Магазин</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="buytickets.html" class="overlay-link">
-            <div class="link-text">Купить билеты</div>
-            <div class="link-arrow">→</div>
-          </a>
-        </nav>
-      </div>
+        <a href="events.html" class="overlay-link">
+          <div class="link-text">Мероприятия</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="shop.html" class="overlay-link">
+          <div class="link-text">Магазин</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="buytickets.html" class="overlay-link">
+          <div class="link-text">Купить билеты</div>
+          <div class="link-arrow">→</div>
+        </a>
+      </nav>
+    </div>
+    <section class="first_screen">
       <div class="gallery">
         <div class="row">
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 1" />
+            <img src="./images/01img.png" alt="Image 1" />
           </div>
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 2" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="img">
-            <img src="./images/01img.jpg" alt="Image 3" />
-          </div>
-          <div class="img">
-            <img src="./images/01img.jpg" alt="Image 4" />
-          </div>
-          <div class="img">
-            <img src="./images/01img.jpg" alt="Image 5" />
+            <img src="./images/02img.png" alt="Image 2" />
           </div>
         </div>
 
         <div class="row">
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 6" />
+            <img src="./images/03img.png" alt="Image 3" />
           </div>
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 7" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="img">
-            <img src="./images/01img.jpg" alt="Image 8" />
+            <img src="./images/04img.png" alt="Image 4" />
           </div>
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 9" />
-          </div>
-          <div class="img">
-            <img src="./images/01img.jpg" alt="Image 10" />
+            <img src="./images/05img.png" alt="Image 5" />
           </div>
         </div>
 
         <div class="row">
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 11" />
+            <img src="./images/06img.png" alt="Image 6" />
           </div>
           <div class="img">
-            <img src="./images/01img.jpg" alt="Image 12" />
+            <img src="./images/07img.png" alt="Image 7" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="img">
+            <img src="./images/08img.png" alt="Image 8" />
+          </div>
+          <div class="img">
+            <img src="./images/09img.png" alt="Image 9" />
+          </div>
+          <div class="img">
+            <img src="./images/10img.png" alt="Image 10" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="img">
+            <img src="./images/11img.png" alt="Image 11" />
+          </div>
+          <div class="img">
+            <img src="./images/12img.png" alt="Image 12" />
           </div>
         </div>
       </div>

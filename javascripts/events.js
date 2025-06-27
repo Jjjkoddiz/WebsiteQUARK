@@ -16,21 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const allGalleryImages = document.querySelectorAll('.gallery .img img');
 
   function openImage(img) {
+    const imgContainer = img.parentElement;
     const rect = img.getBoundingClientRect();
     const originalWidth = rect.width;
     const originalHeight = rect.height;
     const originalTop = rect.top + window.scrollY;
     const originalLeft = rect.left + window.scrollX;
 
-    // Сохраняем исходные стили и размеры
-    img.dataset.originalStyle = img.getAttribute('style') || ''; // Сохраняем все inline стили
     img.dataset.originalWidth = originalWidth;
     img.dataset.originalHeight = originalHeight;
     img.dataset.originalTop = originalTop;
     img.dataset.originalLeft = originalLeft;
 
+    // Сохраняем стили контейнера и изображения
+    imgContainer.dataset.originalWidth = getComputedStyle(imgContainer).width;
+    imgContainer.dataset.originalHeight = getComputedStyle(imgContainer).height;
+    img.dataset.originalPosition = getComputedStyle(img).position;
+    img.dataset.originalObjectFit = getComputedStyle(img).objectFit;
+    img.dataset.originalScale = 1; // Сохраняем исходный масштаб
+
     galleryOverlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
+
+    // Фиксируем размеры контейнера
+    imgContainer.style.width = imgContainer.dataset.originalWidth;
+    imgContainer.style.height = imgContainer.dataset.originalHeight;
 
     gsap.set(img, {
       position: 'fixed',
@@ -41,16 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
       zIndex: 200,
       objectFit: 'cover',
       cursor: 'zoom-out',
+      scale: 1, // Устанавливаем исходный масштаб
     });
-
     img.classList.add('active');
 
     gsap.to(img, {
       duration: 0.5,
       top: '50%',
       left: '50%',
-      width: '90%',
-      height: '90%',
+      scale: 4, // Увеличиваем масштаб во время анимации
       xPercent: -50,
       yPercent: -50,
       objectFit: 'contain',
@@ -59,35 +68,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function closeImage(img) {
+    const imgContainer = img.parentElement;
     const originalWidth = parseFloat(img.dataset.originalWidth);
     const originalHeight = parseFloat(img.dataset.originalHeight);
     const originalTop = parseFloat(img.dataset.originalTop);
     const originalLeft = parseFloat(img.dataset.originalLeft);
 
+    const originalPosition = img.dataset.originalPosition;
+    const originalObjectFit = img.dataset.originalObjectFit;
+    const originalScale = parseFloat(img.dataset.originalScale); // Получаем исходный масштаб
+
     gsap.to(img, {
       duration: 0.5,
       top: originalTop,
       left: originalLeft,
-      width: originalWidth,
-      height: originalHeight,
+      scale: originalScale, // Возвращаем к исходному масштабу
       xPercent: 0,
       yPercent: 0,
-      objectFit: 'cover',
+      objectFit: originalObjectFit,
       boxShadow: 'none',
-      onStart: () => {
-        // Перед анимацией возврата, устанавливаем position: fixed и z-index
-        gsap.set(img, {
-          position: 'fixed',
-          zIndex: 200,
-        });
-      },
       onComplete: () => {
         img.classList.remove('active');
         galleryOverlay.style.display = 'none';
         document.body.style.overflow = 'auto';
 
-        // Восстанавливаем исходные стили
-        img.setAttribute('style', img.dataset.originalStyle);
+        // Восстанавливаем стили контейнера
+        imgContainer.style.width = imgContainer.dataset.originalWidth;
+        imgContainer.style.height = imgContainer.dataset.originalHeight;
+
+        // Явно устанавливаем исходные стили изображения
+        img.style.position = originalPosition;
+        img.style.top = '';
+        img.style.left = '';
+        img.style.width = ''; // Удаляем inline width
+        img.style.height = ''; // Удаляем inline height
       },
     });
   }

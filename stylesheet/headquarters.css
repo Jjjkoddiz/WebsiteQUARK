@@ -1,0 +1,49 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000000;
+  position: relative;
+}
+
+.first_screen {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h2 {
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-size: 6vw;
+  font-weight: 550;
+  color: #eeeeee;
+  letter-spacing: 0.2vw;
+  line-height: normal;
+}
+
+.teasertext {
+  margin-top: 13vw;
+  margin-left: 9vw;
+}

@@ -9,6 +9,21 @@ body {
   overflow-x: hidden;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 h1 {
   font-family: 'HelveticaNeueCyr-Roman';
   font-size: 12vw;
@@ -136,6 +151,7 @@ a {
 .product-name {
   font-size: 2vw;
   margin-right: 3vw;
+  font-family: 'HelveticaNeueCyr-Roman';
 }
 
 .product-cha {
@@ -169,6 +185,7 @@ a {
   font-size: 1.25vw;
   margin-right: 4vw;
   white-space: nowrap;
+  font-family: 'HelveticaNeueCyr-Roman';
 }
 
 .product-btn {

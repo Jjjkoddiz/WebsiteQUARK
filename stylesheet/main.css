@@ -13,8 +13,22 @@ body {
   width: 100vw;
   background: #000000;
   overflow-x: hidden;
-  font-family: sans-serif;
   color: #eeeeee;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 h1 {
@@ -29,8 +43,6 @@ h2 {
   font-size: 6vw;
   font-weight: 500;
   color: #eeeeee;
-  line-height: 1.2;
-  text-transform: uppercase;
   letter-spacing: 0.2vw;
 }
 
@@ -138,7 +150,10 @@ a {
   position: relative;
   z-index: 11;
 }
-
+.logoim {
+  width: 70px;
+  height: 70px;
+}
 .menu-toggle:hover {
   background: #6a6a6a;
 }
@@ -293,7 +308,7 @@ a {
 .second_screen {
   position: relative;
   min-height: 100vh;
-  z-index: 1;
+  z-index: 2;
 }
 
 .containertwo {
@@ -323,6 +338,7 @@ a {
   font-size: 1vw;
   white-space: nowrap;
   transition: font-size 0.3s ease, transform 0.3s ease;
+  font-family: 'HelveticaNeueCyr-Roman';
 }
 
 .multi-line {

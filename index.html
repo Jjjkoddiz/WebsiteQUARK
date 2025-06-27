@@ -3,45 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Quark" />
+    <meta
+      property="og:description"
+      content="Промо-сайт турагентства по микромиру Quark"
+    />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./stylesheet/style.css" />
     <title>WebsiteQUARK</title>
   </head>
   <body>
-    <section class="first_screen">
-      <header class="site-header">
-        <a href="index.html">
-          <div class="logo">
-            <img class="logoim" src="./images/logo.svg" />
-          </div>
+    <header class="site-header">
+      <a href="index.html">
+        <div class="logo">
+          <img class="logoim" src="./images/logo.svg" />
+        </div>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </button>
+    </header>
+    <div id="overlay" class="overlay">
+      <nav class="overlay-nav">
+        <a href="headquarters.html" class="overlay-link">
+          <div class="link-text">Штаб-квартира</div>
+          <div class="link-arrow">→</div>
         </a>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
-          <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </button>
-      </header>
-      <div id="overlay" class="overlay">
-        <nav class="overlay-nav">
-          <a href="headquarters.html" class="overlay-link">
-            <div class="link-text">Штаб-квартира</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="events.html" class="overlay-link">
-            <div class="link-text">Мероприятия</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="shop.html" class="overlay-link">
-            <div class="link-text">Магазин</div>
-            <div class="link-arrow">→</div>
-          </a>
-          <a href="buytickets.html" class="overlay-link">
-            <div class="link-text">Купить билеты</div>
-            <div class="link-arrow">→</div>
-          </a>
-        </nav>
-      </div>
+        <a href="events.html" class="overlay-link">
+          <div class="link-text">Мероприятия</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="shop.html" class="overlay-link">
+          <div class="link-text">Магазин</div>
+          <div class="link-arrow">→</div>
+        </a>
+        <a href="buytickets.html" class="overlay-link">
+          <div class="link-text">Купить билеты</div>
+          <div class="link-arrow">→</div>
+        </a>
+      </nav>
+    </div>
+    <section class="first_screen">
       <div class="site-content">
         <video autoplay muted loop id="heroVideo">
           <source src="./video/0001-1413.mp4" type="video/mp4" />
