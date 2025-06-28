@@ -11,29 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const categoryRows = document.querySelectorAll('.category-row');
-
-  categoryRows.forEach((row) => {
-    const decrementButton = row.querySelector('.control-button:first-child');
-    const incrementButton = row.querySelector('.control-button:last-child');
-    const countElement = row.querySelector('.category-count');
-    let count = 0;
-
-    decrementButton.addEventListener('click', () => {
-      if (count > 0) {
-        count--;
-        countElement.textContent = count;
-      }
-    });
-
-    incrementButton.addEventListener('click', () => {
-      count++;
-      countElement.textContent = count;
-    });
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   // Обработчики для счетчиков категорий
   document.querySelectorAll('.category-controls').forEach((controls) => {
@@ -173,7 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       z-index: 1000;
-      font-size: 18px;
+      font-size: 1vw;
+      font-family: 'HelveticaNeueCyr-Roman';
+      letter-spacing: 0.1vw;
     `;
 
     document.body.appendChild(successMessage);

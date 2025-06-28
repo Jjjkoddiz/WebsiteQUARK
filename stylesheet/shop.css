@@ -84,7 +84,7 @@ a {
 
 .product-hero {
   width: 100vw;
-  height: auto;
+  height: 80%;
   position: relative;
 }
 
@@ -116,7 +116,7 @@ a {
   width: 100vw;
   height: 6.25vw;
   position: relative;
-  top: 52vw;
+  top: 6vw;
   background-color: #222;
   z-index: 8;
 }
@@ -156,7 +156,7 @@ a {
 
 .product-cha {
   width: 11.5vw;
-  height: 2.2vw;
+  height: 2.6vw;
   border: none;
   cursor: pointer;
   background: #8c8c8c;
@@ -206,7 +206,7 @@ a {
 }
 
 .product-btn:hover {
-  background-color: #6a6a6a;
+  background-color: #b4b4b4;
 }
 
 .overlayshop {

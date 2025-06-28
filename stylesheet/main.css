@@ -267,6 +267,26 @@ a {
 .overlay-link:hover .link-arrow {
   transform: translateX(0.3vw);
 }
+@media (max-width: 1024px) {
+  .logoim {
+    width: 37px;
+    height: 37px;
+  }
+
+  .menu-toggle {
+    width: 37px;
+    height: 37px;
+  }
+
+  .hamburger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .line {
+    height: 4px;
+  }
+}
 
 @media (max-width: 768px) {
   .overlay-nav {
@@ -309,15 +329,16 @@ a {
   position: relative;
   min-height: 100vh;
   z-index: 2;
+  width: 100vw;
 }
 
 .containertwo {
   position: relative;
-  width: 85%;
-  margin: 0 auto;
+  width: 95%;
   padding: 10px;
   box-sizing: border-box;
   height: 80vh;
+  margin: 0 auto;
 }
 
 .row {

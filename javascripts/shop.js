@@ -66,7 +66,7 @@ function setupProductScreen(
 
 // Настройка для первого экрана (Очки)
 setupProductScreen(
-  '.first_screen',
+  '.first_screen_glasses',
   '.product-description',
   '.overlayshop',
   '.product-cha',
@@ -75,7 +75,7 @@ setupProductScreen(
 
 // Настройка для второго экрана (Камера)
 setupProductScreen(
-  '.second_screen',
+  '.second_screen_camera',
   '.camera-product-description',
   '.camera-overlayshop',
   '.camera-cha',
@@ -83,7 +83,7 @@ setupProductScreen(
 );
 
 setupProductScreen(
-  '.third_screen',
+  '.third_screen_book',
   '.book-product-description',
   '.book-overlayshop',
   '.book-cha',
@@ -91,7 +91,7 @@ setupProductScreen(
 );
 
 setupProductScreen(
-  '.fourth_screen',
+  '.fourth_screen_figure',
   '.figure-product-description',
   '.figure-overlayshop',
   '.figure-cha',
