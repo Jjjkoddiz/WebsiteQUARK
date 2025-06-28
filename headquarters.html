@@ -10,6 +10,7 @@
     />
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./stylesheet/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="./javascripts/headquarters.js"></script>
     <title>WebsiteQUARK</title>
   </head>
@@ -50,12 +51,191 @@
     </div>
     <section class="first_screen">
       <h2 class="teasertext">
-        Метафора здания — <br />
-        это пульсирующее сердце, <br />
-        которое, сокращаясь, <br />
-        изменяет свой размер
+        <span class="text-line">Метафора здания —</span><br />
+        <span class="text-line">это пульсирующее сердце,</span><br />
+        <span class="text-line">которое, сокращаясь,</span><br />
+        <span class="text-line">изменяет свой размер</span>
       </h2>
     </section>
-    <section class="second_screen"></section>
+    <section class="second-screen">
+      <div class="text-container">
+        <h3>
+          Навигация —<br />
+          это кровеносная<br />
+          система «Кварка»
+        </h3>
+        <h4>
+          Она всегда поможет найти<br />
+          портал, чтобы отправиться<br />
+          в микромир.
+        </h4>
+      </div>
+      <div class="headcontainer">
+        <img src="./images/navpic.png" alt="Карта" />
+        <div
+          class="point-container"
+          data-point="1"
+          style="left: 6vw; top: 24vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip">
+            <h4>Офис</h4>
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <div
+          class="point-container"
+          data-point="2"
+          style="left: 12vw; top: 22vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip bottom">
+            <div class="line"></div>
+            <h4>Гараж</h4>
+          </div>
+        </div>
+        <div
+          class="point-container"
+          data-point="3"
+          style="left: 21vw; top: 24vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip">
+            <h4>Портал</h4>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div
+          class="point-container"
+          data-point="4"
+          style="left: 30vw; top: 16vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip">
+            <h4>
+              Вертолётная <br />
+              площадка
+            </h4>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div
+          class="point-container"
+          data-point="5"
+          style="left: 40vw; top: 10vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip">
+            <h4>Зона подготовки</h4>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div
+          class="point-container"
+          data-point="6"
+          style="left: 40.3vw; top: 28.5vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip bottom">
+            <div class="line"></div>
+            <h4>Выставка</h4>
+          </div>
+        </div>
+        <div
+          class="point-container"
+          data-point="7"
+          style="left: 46vw; top: 37vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip bottom">
+            <div class="line"></div>
+            <h4>
+              Смотровая <br />
+              площадка
+            </h4>
+          </div>
+        </div>
+        <div
+          class="point-container"
+          data-point="8"
+          style="left: 57vw; top: 31.5vw"
+        >
+          <div class="point"></div>
+          <div class="tooltip bottom">
+            <div class="line"></div>
+            <h4>Вход</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="third_screen">
+      <div class="row">
+        <img src="./images/helipad.png" alt="Вертолётная площадка" />
+        <h4>Вертолётная площадка</h4>
+      </div>
+      <div class="row">
+        <img
+          src="./images/Travel preparation area.png"
+          alt="Зона подготовки к путешествию"
+        />
+        <h4>Зона подготовки<br />к путешествию</h4>
+      </div>
+      <div class="row">
+        <img src="./images/exhibition.png" alt="Выставка" />
+        <h4>Выставка</h4>
+      </div>
+      <div class="row">
+        <img src="./images/portal.png" alt="Портал" />
+        <h4>Портал</h4>
+      </div>
+      <div class="row">
+        <img src="./images/office.png" alt="Офис" />
+        <h4>Офис</h4>
+      </div>
+    </section>
+    <section class="fourth_screen">
+      <div class="line1">
+        <div class="line-wrapper1">
+          <img class="line1" src="./images/exterior1.png" />
+          <img class="line1" src="./images/exterior2.png" />
+          <img class="line1" src="./images/exterior3.png" />
+          <img class="line1" src="./images/exterior4.png" />
+        </div>
+      </div>
+    </section>
+    <section class="fifth_screen">
+      <div class="line2">
+        <div class="line-wrapper2">
+          <img class="line2" src="./images/linetwo1.png" />
+          <img class="line2" src="./images/linetwo2.png" />
+          <img class="line2" src="./images/linetwo3.png" />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-buttons">
+        <button class="footer-button">
+          <h4 class="footertext">Бекетова Анастасия</h4>
+        </button>
+        <a
+          href="https://jjjkoddiz.github.io/LandingQUARK/"
+          class="footer-button with-arrow"
+        >
+          <h4 class="footertext">VR-tour</h4>
+          <span class="link-arrow2">→</span>
+        </a>
+        <a
+          href="https://jjjkoddiz.github.io/WebPosterQUARK/"
+          class="footer-button with-arrow"
+        >
+          <h4 class="footertext">Quark Web Poster</h4>
+          <span class="link-arrow2">→</span>
+        </a>
+        <button class="footer-button">
+          <h4 class="footertext">Б24дз08</h4>
+        </button>
+      </div>
+    </footer>
   </body>
 </html>

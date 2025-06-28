@@ -44,6 +44,327 @@ h2 {
 }
 
 .teasertext {
-  margin-top: 13vw;
+  margin-top: 15vw;
   margin-left: 9vw;
+}
+
+.text-line {
+  opacity: 0;
+  transform: translateY(30px) rotateX(-15deg);
+  transform-origin: bottom center;
+  perspective: 800px;
+  display: inline-block;
+}
+
+.second-screen {
+  position: relative;
+  width: 100vw;
+  height: 120vh;
+  overflow: hidden;
+}
+
+.text-container {
+  position: absolute;
+  left: 7.81vw;
+  top: 42vw;
+  width: 20vw;
+}
+
+.text-container h3 {
+  font-size: 2vw;
+  margin-bottom: 1.04vw;
+}
+
+.headcontainer {
+  position: absolute;
+  left: 17vw;
+  top: 6.5vw;
+  width: 69vw;
+  height: 53vw;
+}
+
+.headcontainer img {
+  width: 95%;
+  height: 92%;
+  display: block;
+}
+
+.point-container {
+  position: absolute;
+  z-index: 2;
+}
+
+.point {
+  width: 0.73vw;
+  height: 0.73vw;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.point-container:hover .tooltip {
+  opacity: 1;
+}
+
+.tooltip .line {
+  width: 0.2vw;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='1'] .tooltip {
+  bottom: 22vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='1'] .tooltip .line {
+  height: 22vw;
+  top: 1.5vw;
+}
+
+.point-container[data-point='1'] .tooltip h4 {
+  margin-bottom: 0.5vw;
+  margin-left: 3vw;
+}
+
+.point-container[data-point='2'] .tooltip {
+  top: 24vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='2'] .tooltip .line {
+  height: 24vw;
+  top: -24vw;
+}
+
+.point-container[data-point='2'] .tooltip h4 {
+  margin-top: 0.5vw;
+  margin-left: 3vw;
+}
+
+.point-container[data-point='3'] .tooltip {
+  bottom: 22vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='3'] .tooltip .line {
+  height: 22vw;
+  top: 1.5vw;
+}
+
+.point-container[data-point='3'] .tooltip h4 {
+  margin-bottom: 0.5vw;
+  margin-left: 4vw;
+}
+
+.point-container[data-point='4'] .tooltip {
+  bottom: 13.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='4'] .tooltip .line {
+  height: 13vw;
+  top: 1.5vw;
+}
+
+.point-container[data-point='4'] .tooltip h4 {
+  margin-top: -1vw;
+  margin-left: 7vw;
+}
+
+.point-container[data-point='5'] .tooltip {
+  bottom: 8vw;
+  left: 45%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='5'] .tooltip .line {
+  height: 8vw;
+  top: 1.5vw;
+}
+
+.point-container[data-point='5'] .tooltip h4 {
+  margin-bottom: 0.5vw;
+  margin-left: 7vw;
+}
+
+.point-container[data-point='6'] .tooltip {
+  top: 17vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='6'] .tooltip .line {
+  height: 17vw;
+  top: -17vw;
+}
+
+.point-container[data-point='6'] .tooltip h4 {
+  margin-top: 0.5vw;
+  margin-left: 5vw;
+}
+
+.point-container[data-point='7'] .tooltip {
+  top: 8.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='7'] .tooltip .line {
+  height: 8.5vw;
+  top: -8.5vw;
+}
+
+.point-container[data-point='7'] .tooltip h4 {
+  margin-top: 0.5vw;
+  margin-left: 6vw;
+}
+
+.point-container[data-point='8'] .tooltip {
+  top: 14vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-container[data-point='8'] .tooltip .line {
+  height: 14vw;
+  top: -14vw;
+}
+
+.point-container[data-point='8'] .tooltip h4 {
+  margin-top: 0.5vw;
+  margin-left: 3vw;
+}
+
+.third_screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.third_screen .row {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.third_screen img {
+  width: 12vw;
+  height: auto;
+}
+
+.third_screen h4 {
+  margin-top: 1vw;
+}
+
+/* Позиционирование каждого ряда */
+.third_screen .row:nth-child(1) {
+  left: 19vw;
+  top: 2vw;
+}
+
+.third_screen .row:nth-child(2) {
+  left: 42vw;
+  top: 7vw;
+}
+
+.third_screen .row:nth-child(3) {
+  left: 65vw;
+  top: 12vw;
+}
+
+.third_screen .row:nth-child(4) {
+  left: 25vw;
+  top: 27vw;
+}
+
+.third_screen .row:nth-child(5) {
+  left: 48vw;
+  top: 30vw;
+}
+
+.fourth_screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.line-wrapper1 {
+  position: relative;
+  display: flex;
+  gap: 2vw;
+  animation: line1 8s linear infinite;
+}
+
+.line1 {
+  margin-top: 0.5vw;
+  height: 35vw;
+  position: relative;
+}
+
+@keyframes line1 {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-105vw);
+  }
+}
+
+.line-wrapper1:hover {
+  animation-play-state: paused;
+}
+
+.fifth_screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.line-wrapper2 {
+  position: relative;
+  display: flex;
+  gap: 2vw;
+  animation: line2 8s linear infinite;
+}
+
+.line2 {
+  margin-top: 0.5vw;
+  height: 35vw;
+  position: relative;
+}
+
+@keyframes line2 {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-105vw);
+  }
+}
+
+.line-wrapper1:hover {
+  animation-play-state: paused;
 }
