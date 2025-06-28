@@ -63,14 +63,14 @@ h2 {
   overflow: hidden;
 }
 
-.text-container {
+.text-box {
   position: absolute;
   left: 7.81vw;
   top: 42vw;
   width: 20vw;
 }
 
-.text-container h3 {
+.text-box h3 {
   font-size: 2vw;
   margin-bottom: 1.04vw;
 }
@@ -365,6 +365,6 @@ h2 {
   }
 }
 
-.line-wrapper1:hover {
+.line-wrapper2:hover {
   animation-play-state: paused;
 }

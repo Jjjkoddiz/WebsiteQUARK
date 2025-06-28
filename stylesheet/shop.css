@@ -76,7 +76,7 @@ a {
   transition: opacity 0.4s ease, visibility 0.4s ease;
   z-index: 9;
 }
-.first_screen {
+.first_screen_glasses {
   position: relative;
   height: 120vh;
   overflow: hidden;
@@ -277,7 +277,7 @@ a {
   vertical-align: middle;
 }
 
-.second_screen {
+.second_screen_camera {
   position: relative;
   height: 120vh;
   overflow: hidden;
@@ -366,7 +366,7 @@ a {
   vertical-align: middle;
 }
 
-.third_screen {
+.third_screen_book {
   position: relative;
   height: 120vh;
   overflow: hidden;
@@ -483,7 +483,7 @@ a {
   z-index: 8;
 }
 
-.fourth_screen {
+.fourth_screen_figure {
   position: relative;
   height: 120vh;
   overflow: hidden;

@@ -347,13 +347,13 @@ a {
 }
 
 .row-1 {
-  top: 8.5vw;
+  top: 8vw;
   left: 50vw;
   justify-content: flex-start;
 }
 
 .row-2 {
-  top: 20vw;
+  top: 10vw;
   left: 15vw;
   justify-content: flex-start;
 }
@@ -363,7 +363,7 @@ a {
 }
 
 .row-3 {
-  top: 32vw;
+  top: 10vw;
   left: 28.5vw;
   justify-content: flex-start;
 }
@@ -377,7 +377,7 @@ a {
 }
 
 .row-4 {
-  top: 48vw;
+  top: 10vw;
   left: 28vw;
   justify-content: flex-start;
 }
@@ -391,7 +391,7 @@ a {
 }
 
 .row-5 {
-  top: 60vw;
+  top: 10vw;
   left: 15vw;
   justify-content: flex-start;
 }
