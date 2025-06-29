@@ -267,81 +267,23 @@ a {
 .overlay-link:hover .link-arrow {
   transform: translateX(0.3vw);
 }
-@media (max-width: 1024px) {
-  .logoim {
-    width: 37px;
-    height: 37px;
-  }
-
-  .menu-toggle {
-    width: 37px;
-    height: 37px;
-  }
-
-  .hamburger {
-    width: 20px;
-    height: 20px;
-  }
-
-  .line {
-    height: 4px;
-  }
-}
-
-@media (max-width: 768px) {
-  .overlay-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5vw;
-    max-width: 95vw;
-  }
-
-  .overlay-link {
-    width: 100%;
-    max-width: 80vw;
-    padding: 2.5vw 5vw;
-    font-size: 4vw;
-    min-width: auto;
-  }
-
-  .link-arrow {
-    margin-left: 3vw;
-  }
-
-  .overlay-link:hover {
-    transform: translateY(-0.5vw);
-  }
-
-  .overlay-link:hover .link-arrow {
-    transform: translateX(1vw);
-  }
-}
-
-/* Адаптив для очень маленьких экранов */
-@media (max-width: 480px) {
-  .overlay-link {
-    padding: 3.5vw 6vw;
-    font-size: 5vw;
-  }
-}
 
 .second_screen {
   position: relative;
-  min-height: 100vh;
-  z-index: 2;
+  min-height: 110vh;
   width: 100vw;
 }
 
 .containertwo {
   position: relative;
-  width: 95%;
+  width: 93%;
   padding: 10px;
   box-sizing: border-box;
   height: 80vh;
   margin: 0 auto;
 }
 
-.row {
+.rowhor {
   position: absolute;
   display: flex;
   align-items: center;
@@ -349,8 +291,8 @@ a {
 }
 
 .image-container img {
-  width: 5.6vw;
-  height: 3.4vw;
+  width: 5vw;
+  height: 3vw;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -367,191 +309,75 @@ a {
   line-height: 1;
 }
 
-.row-1 {
+.rowhor-1 {
   top: 8vw;
-  left: 50vw;
+  left: 45vw;
   justify-content: flex-start;
 }
 
-.row-2 {
-  top: 10vw;
-  left: 15vw;
+.rowhor-2 {
+  top: 20vw;
+  left: 13vw;
   justify-content: flex-start;
 }
 
-.row-2 .image-container:nth-child(2) {
-  margin-left: 57vw;
+.rowhor-2 .image-container:nth-child(2) {
+  margin-left: 50vw;
 }
 
-.row-3 {
-  top: 10vw;
-  left: 28.5vw;
+.rowhor-3 {
+  top: 28vw;
+  left: 20vw;
   justify-content: flex-start;
 }
 
-.row-3 .text-container:nth-child(2) {
-  margin-left: 11.8vw;
+.rowhor-3 .text-container:nth-child(2) {
+  margin-left: 11vw;
 }
 
-.row-3 .text-container:nth-child(3) {
+.rowhor-3 .text-container:nth-child(3) {
   margin-left: 14vw;
 }
 
-.row-4 {
-  top: 10vw;
-  left: 28vw;
+.rowhor-4 {
+  top: 37vw;
+  left: 20vw;
   justify-content: flex-start;
 }
 
-.row-4 .text-container:nth-child(2) {
+.rowhor-4 .text-container:nth-child(2) {
   margin-left: 27.6vw;
 }
 
-.row-4 .text-container:nth-child(3) {
+.rowhor-4 .text-container:nth-child(3) {
   margin-left: 9.1vw;
 }
 
-.row-5 {
-  top: 10vw;
-  left: 15vw;
+.rowhor-5 {
+  top: 47vw;
+  left: 32vw;
   justify-content: flex-start;
 }
 
-.row-5 .image-container {
-  margin-left: 38.3vw;
-  top: -0.9vw;
+.rowhor-5 .image-container {
+  margin-left: 20vw;
   position: relative;
 }
 
 .image-container img:hover {
   transform: scale(3.1);
-  z-index: 2;
 }
 
 .text-container:hover {
   font-size: 3.8vw;
   transform: scale(1.2);
-  z-index: 2;
 }
 
 .multi-line:hover {
   font-size: 2vw;
   transform: scale(1);
-  z-index: 2;
 }
 
-.row-1 .image-container img:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.row-2 .image-container img:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.row-3 .text-container:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.row-4 .image-container img:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.row-4 .text-container:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.row-5 .text-container:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.row-5 .image-container img:hover {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-/* Адаптивность для экранов 768px и меньше */
-@media (max-width: 768px) {
-  img {
-    width: 15vw;
-    height: 7.5vw;
-  }
-
-  .text-container {
-    font-size: 2.2vw;
-  }
-
-  .row-1 {
-    top: 12vw;
-    left: 30vw;
-  }
-
-  .row-2 {
-    top: 30vw;
-    left: 10vw;
-  }
-
-  .row-2 .image-container:nth-child(2) {
-    margin-left: 50vw;
-  }
-
-  .row-3 {
-    top: 45vw;
-    left: 15vw;
-  }
-
-  .row-3 .text-container:nth-child(2) {
-    margin-left: 10vw;
-  }
-
-  .row-3 .text-container:nth-child(3) {
-    margin-left: 5vw;
-  }
-
-  .row-4 {
-    top: 60vw;
-    left: 15vw;
-  }
-
-  .row-4 .text-container:nth-child(2) {
-    margin-left: 25vw;
-  }
-
-  .row-4 .text-container:nth-child(3) {
-    margin-left: 5vw;
-  }
-
-  .row-5 {
-    top: 75vw;
-    left: 5vw;
-  }
-
-  .row-5 .image-container {
-    margin-left: 30vw;
-    top: 0vw;
-  }
-
-  .image-container img:hover {
-    transform: scale(3.1);
-  }
-
-  .text-container:hover {
-    font-size: 7vw;
-    transform: scale(3.1);
-  }
-}
 footer {
   margin-top: 5vw;
   width: 100%;
@@ -612,4 +438,148 @@ footer {
 
 .footer-button.with-arrow:hover .link-arrow2 {
   transform: translateX(0.3vw);
+}
+
+@media (max-width: 1024px) {
+  .logoim {
+    width: 37px;
+    height: 37px;
+  }
+
+  .menu-toggle {
+    width: 37px;
+    height: 37px;
+  }
+
+  .hamburger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .line {
+    height: 4px;
+  }
+
+  .text-container {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .first_screen {
+    height: 120vh;
+  }
+
+  .hero-copy h1 {
+    margin-top: 70%;
+  }
+
+  .image-container img {
+    width: 14vw;
+    height: 7vw;
+  }
+
+  .text-container {
+    font-size: 2.2vw;
+  }
+  .containertwo {
+    height: 100vh;
+  }
+
+  .rowhor-1 {
+    top: 10vw;
+    left: 45vw;
+  }
+
+  .rowhor-2 {
+    top: 27vw;
+    left: 5vw;
+  }
+
+  .rowhor-2 .image-container:nth-child(2) {
+    margin-left: 57vw;
+  }
+
+  .rowhor-3 {
+    top: 47vw;
+    left: 6vw;
+  }
+
+  .rowhor-3 .text-container:nth-child(2) {
+    margin-left: 22vw;
+  }
+
+  .rowhor-3 .text-container:nth-child(3) {
+    margin-left: 35vw;
+  }
+
+  .rowhor-4 {
+    top: 60vw;
+    left: 5vw;
+  }
+
+  .rowhor-4 .text-container:nth-child(2) {
+    margin-left: 18vw;
+  }
+
+  .rowhor-4 .text-container:nth-child(3) {
+    margin-left: 26vw;
+  }
+
+  .rowhor-5 {
+    top: 80vw;
+    left: 5vw;
+  }
+
+  .rowhor-5 .image-container {
+    margin-left: 35vw;
+  }
+  .image-container img:hover {
+    transform: scale(2.1);
+  }
+
+  .text-container:hover {
+    font-size: 3.8vw;
+    transform: scale(1.3);
+  }
+
+  .multi-line:hover {
+    font-size: 2vw;
+    transform: scale(1.3);
+  }
+
+  .overlay-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vw;
+    max-width: 95vw;
+  }
+
+  .overlay-link {
+    width: 100%;
+    max-width: 80vw;
+    padding: 2.5vw 5vw;
+    font-size: 4vw;
+    min-width: auto;
+  }
+
+  .link-arrow {
+    margin-left: 3vw;
+  }
+
+  .overlay-link:hover {
+    transform: translateY(-0.5vw);
+  }
+
+  .overlay-link:hover .link-arrow {
+    transform: translateX(1vw);
+  }
+}
+
+/* Адаптив для очень маленьких экранов */
+@media (max-width: 480px) {
+  .overlay-link {
+    padding: 3.5vw 6vw;
+    font-size: 5vw;
+  }
 }
