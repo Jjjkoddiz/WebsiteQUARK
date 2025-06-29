@@ -296,25 +296,14 @@ a {
   object-fit: contain;
 }
 .camera-product-description {
-  /* position: absolute;
-  width: 100%;
-  height: 50vh;
-  bottom: 10vh;
-  background-color: #222;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding-bottom: 15vh;
-  display: flex;
-  display: none;
-  z-index: 8; */
   position: absolute;
   width: 100%;
   height: 50vh;
-  bottom: 6.25vw; /* Высота product-infobook */
+  bottom: 6.25vw;
   background-color: #222;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  padding-bottom: 0; /* Уберите лишний отступ */
+  padding-bottom: 0;
   display: flex;
   display: none;
   z-index: 8;
@@ -386,12 +375,12 @@ a {
 
 .product-herobook {
   position: relative;
-  width: 80%;
+  width: 74%;
   height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 9vw;
+  margin-left: 12vw;
 }
 
 .product-images-container {
@@ -414,29 +403,16 @@ a {
 .product-image.active {
   opacity: 1;
 }
-/* .book-product-description {
-  position: absolute;
-  width: 100%;
-  height: 50vh;
-  bottom: 10vh;
-  background-color: #222;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding-bottom: 15vh;
-  display: flex;
-  display: none;
-  z-index: 8;
-} */
 
 .book-product-description {
   position: absolute;
   width: 100%;
   height: 50vh;
-  bottom: 6.25vw; /* Высота product-infobook */
+  bottom: 6.25vw;
   background-color: #222;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  padding-bottom: 0; /* Уберите лишний отступ */
+  padding-bottom: 0;
   display: flex;
   display: none;
   z-index: 8;
@@ -495,24 +471,15 @@ a {
 }
 .book-product-description img {
   width: 100%;
-  /* max-width: 470px; */
+
   vertical-align: middle;
 }
-
-/* .product-infobook {
-  width: 100vw;
-  height: 6.25vw;
-  position: relative;
-  top: 9vw;
-  background-color: #222;
-  z-index: 8;
-} */
 
 .product-infobook {
   width: 100vw;
   height: 6.25vw;
-  position: absolute; /* Измените с relative на absolute */
-  bottom: 0; /* Закрепите внизу */
+  position: absolute;
+  bottom: 0;
   background-color: #222;
   z-index: 8;
 }
@@ -536,25 +503,14 @@ a {
 }
 
 .figure-product-description {
-  /* position: absolute;
-  width: 100%;
-  height: 50vh;
-  bottom: 10vh;
-  background-color: #222;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  padding-bottom: 15vh;
-  display: flex;
-  display: none;
-  z-index: 8; */
   position: absolute;
   width: 100%;
   height: 50vh;
-  bottom: 6.25vw; /* Высота product-infobook */
+  bottom: 6.25vw;
   background-color: #222;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  padding-bottom: 0; /* Уберите лишний отступ */
+  padding-bottom: 0;
   display: flex;
   display: none;
   z-index: 8;
@@ -952,7 +908,7 @@ footer {
     margin-top: 15vw;
     width: 95%;
     height: 50%;
-    margin-left: 2vw;
+    margin-left: 3vw;
   }
 
   .book-product-description {
