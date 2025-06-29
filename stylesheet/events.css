@@ -288,7 +288,7 @@ a {
 }
 
 @media (max-width: 768px) {
-  .first_screen {
+  .screen {
     min-height: 450vh;
   }
 

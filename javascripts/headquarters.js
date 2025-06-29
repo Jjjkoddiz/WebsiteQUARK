@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Menu
   const btn = document.getElementById('menu-toggle');
   const overlay = document.getElementById('overlay');
 
-  btn.addEventListener('click', () => {
-    const isOpen = btn.classList.toggle('open');
-    overlay.classList.toggle('show', isOpen);
+  if (btn && overlay) {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.classList.toggle('open');
+      overlay.classList.toggle('show', isOpen);
 
-    // Альтернативно: менять aria-label
-    btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-  });
-});
+      // Альтернативно: менять aria-label
+      btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    });
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
+  // text GSAP Animation
   gsap.fromTo(
     '.text-line',
     {
@@ -28,9 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: 'power3.out',
     }
   );
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  // Tooltips in navigation
   const points = document.querySelectorAll('.point');
   const tooltips = document.querySelectorAll('.tooltip');
 

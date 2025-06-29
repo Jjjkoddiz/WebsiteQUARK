@@ -38,6 +38,7 @@ h3 {
   font-weight: 400;
   letter-spacing: 0.1vw;
 }
+
 h4 {
   font-family: 'HelveticaNeueCyr-Roman';
   font-size: 1.04vw;
@@ -76,6 +77,7 @@ a {
   transition: opacity 0.4s ease, visibility 0.4s ease;
   z-index: 9;
 }
+
 .first_screen_glasses {
   position: relative;
   height: 120vh;
@@ -115,8 +117,8 @@ a {
 .product-info {
   width: 100vw;
   height: 6.25vw;
-  position: relative;
-  top: 6vw;
+  position: absolute;
+  bottom: 0;
   background-color: #222;
   z-index: 8;
 }
@@ -127,7 +129,6 @@ a {
   width: 85vw;
   height: 6.25vw;
   margin: 0 auto;
-  border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   position: absolute;
   bottom: 0;
@@ -226,11 +227,11 @@ a {
   position: absolute;
   width: 100%;
   height: 50vh;
-  bottom: 10vh;
+  bottom: 6.25vw;
   background-color: #222;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  padding-bottom: 15vh;
+  padding-bottom: 0;
   display: flex;
   display: none;
   z-index: 8;
@@ -239,7 +240,7 @@ a {
 .close-desc {
   padding: 3em;
   cursor: pointer;
-  margin-top: 3vw;
+  margin-top: 2.5vw;
   margin-right: 7vw;
 }
 
@@ -295,7 +296,7 @@ a {
   object-fit: contain;
 }
 .camera-product-description {
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   height: 50vh;
   bottom: 10vh;
@@ -303,6 +304,17 @@ a {
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding-bottom: 15vh;
+  display: flex;
+  display: none;
+  z-index: 8; */
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 6.25vw; /* Высота product-infobook */
+  background-color: #222;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0; /* Уберите лишний отступ */
   display: flex;
   display: none;
   z-index: 8;
@@ -330,7 +342,7 @@ a {
 .camclose-desc {
   padding: 3em;
   cursor: pointer;
-  margin-top: 3vw;
+  margin-top: 2.5vw;
   margin-right: 7vw;
 }
 
@@ -354,11 +366,11 @@ a {
   align-items: center;
 }
 .camside-view .camsketch-img {
-  margin-top: 8vw;
+  margin-top: 2vw;
 }
 
 .camfront-view .camsketch-img {
-  margin-top: 9vw;
+  margin-top: 3vw;
 }
 .camera-product-description img {
   width: 100%;
@@ -373,29 +385,28 @@ a {
 }
 
 .product-herobook {
-  margin-top: 5vw;
   position: relative;
-  width: 100%;
-  height: 70%;
+  width: 80%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 9vw;
+}
+
+.product-images-container {
+  position: relative;
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.product-images-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .product-image {
   position: absolute;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
+  width: 95%;
+  height: 95%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -403,7 +414,7 @@ a {
 .product-image.active {
   opacity: 1;
 }
-.book-product-description {
+/* .book-product-description {
   position: absolute;
   width: 100%;
   height: 50vh;
@@ -412,6 +423,20 @@ a {
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding-bottom: 15vh;
+  display: flex;
+  display: none;
+  z-index: 8;
+} */
+
+.book-product-description {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 6.25vw; /* Высота product-infobook */
+  background-color: #222;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0; /* Уберите лишний отступ */
   display: flex;
   display: none;
   z-index: 8;
@@ -439,7 +464,7 @@ a {
 .bookclose-desc {
   padding: 3em;
   cursor: pointer;
-  margin-top: 3vw;
+  margin-top: 2.5vw;
   margin-right: 7vw;
 }
 
@@ -463,22 +488,31 @@ a {
   align-items: center;
 }
 .bookside-view .booksketch-img {
-  margin-top: 8vw;
+  margin-top: 1vw;
 }
 .bookfront-view .booksketch-img {
-  margin-top: 9vw;
+  margin-top: 1vw;
 }
 .book-product-description img {
   width: 100%;
-  max-width: 470px;
+  /* max-width: 470px; */
   vertical-align: middle;
 }
+
+/* .product-infobook {
+  width: 100vw;
+  height: 6.25vw;
+  position: relative;
+  top: 9vw;
+  background-color: #222;
+  z-index: 8;
+} */
 
 .product-infobook {
   width: 100vw;
   height: 6.25vw;
-  position: relative;
-  top: 6vw;
+  position: absolute; /* Измените с relative на absolute */
+  bottom: 0; /* Закрепите внизу */
   background-color: #222;
   z-index: 8;
 }
@@ -500,8 +534,9 @@ a {
   height: 27.4vw;
   object-fit: contain;
 }
+
 .figure-product-description {
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   height: 50vh;
   bottom: 10vh;
@@ -509,6 +544,17 @@ a {
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding-bottom: 15vh;
+  display: flex;
+  display: none;
+  z-index: 8; */
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 6.25vw; /* Высота product-infobook */
+  background-color: #222;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0; /* Уберите лишний отступ */
   display: flex;
   display: none;
   z-index: 8;
@@ -536,7 +582,7 @@ a {
 .figureclose-desc {
   padding: 3em;
   cursor: pointer;
-  margin-top: 3vw;
+  margin-top: 2.5vw;
   margin-right: 7vw;
 }
 
@@ -567,6 +613,7 @@ a {
   max-width: 470px;
   vertical-align: middle;
 }
+
 footer {
   margin-top: 5vw;
   width: 100%;
@@ -627,4 +674,414 @@ footer {
 
 .footer-button.with-arrow:hover .link-arrow2 {
   transform: translateX(0.3vw);
+}
+
+@media (max-width: 1024px) {
+  .logoim {
+    width: 37px;
+    height: 37px;
+  }
+
+  .menu-toggle {
+    width: 37px;
+    height: 37px;
+  }
+
+  .hamburger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .line {
+    height: 4px;
+  }
+
+  .text-container {
+    font-size: 1.5vw;
+  }
+
+  .first_screen_glasses {
+    height: 95vh;
+  }
+
+  .second_screen_camera {
+    height: 95vh;
+  }
+
+  .third_screen_book {
+    height: 95vh;
+  }
+
+  .fourth_screen_figure {
+    height: 95vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .first_screen_glasses {
+    height: 150vh;
+  }
+
+  .product-hero {
+    height: 85%;
+  }
+
+  h1 {
+    font-size: 22vw;
+  }
+
+  .product-title {
+    position: absolute;
+    top: 20vw;
+    left: 5vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  .product-header {
+    position: absolute;
+    top: 92vw;
+    left: 5vw;
+  }
+
+  .product-look {
+    position: absolute;
+    top: 40vw;
+    left: 5vw;
+  }
+
+  .product-look img {
+    width: 80vw;
+    height: 50vw;
+    object-fit: contain;
+  }
+
+  /* Product Info */
+  .product-info {
+    width: 100vw;
+    height: 26vw;
+  }
+
+  .product-nav {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+  }
+
+  /* Первый столбец - название и кнопка */
+  .product-img {
+    position: absolute;
+    width: 10vw;
+    height: 9vw;
+    left: 9vw;
+    top: 3vw;
+  }
+
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-name {
+    position: absolute;
+    left: 27vw;
+    top: 6vw;
+    font-size: 3vw;
+  }
+
+  .product-cha {
+    position: absolute;
+    width: 29vw;
+    height: 6.5vw;
+    left: 9vw;
+    top: 16vw;
+    font-size: 2.5vw;
+  }
+
+  /* Второй столбец - цена и кнопка */
+  .product-price {
+    position: absolute;
+    right: 17vw;
+    top: 7vw;
+    font-size: 2.34vw;
+    font-family: 'HelveticaNeueCyr-Roman';
+  }
+
+  .product-btn {
+    position: absolute;
+    width: 29vw;
+    height: 6.5vw;
+    right: 8vw;
+    top: 16vw;
+    font-size: 2.5vw;
+  }
+
+  .product-description {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    bottom: 26.04vw;
+  }
+
+  /* Крестик закрытия */
+  .close-desc {
+    position: absolute;
+    left: 83vw;
+  }
+  .close-desc img {
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20px;
+  }
+
+  /* Первое изображение */
+  .front-view {
+    position: absolute;
+    width: 83vw;
+    height: 22vw;
+    top: 18vw;
+    left: 48%;
+    transform: translateX(-50%);
+  }
+
+  /* Второе изображение */
+  .side-view {
+    position: absolute;
+    width: 83vw;
+    height: 22vw;
+    top: 48vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .desc {
+    position: absolute;
+    width: 80vw;
+    top: 68vw;
+    left: 2vw;
+  }
+
+  .desc h4 {
+    font-size: 2.34vw;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .second_screen_camera {
+    height: 150vh;
+  }
+
+  .product-lookcamera {
+    position: absolute;
+    top: 45vw;
+    left: 25vw;
+  }
+
+  .product-lookcamera img {
+    width: 45vw;
+    height: 40vw;
+    object-fit: contain;
+  }
+
+  .camera-product-description {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    bottom: 26.04vw;
+  }
+
+  .camclose-desc {
+    position: absolute;
+    left: 83vw;
+  }
+
+  .camclose-desc img {
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20px;
+  }
+
+  .camdesc {
+    position: absolute;
+    width: 62vw;
+    top: 68vw;
+    left: 2vw;
+  }
+
+  .camdesc h4 {
+    font-size: 2.34vw;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .camfront-view {
+    position: absolute;
+    width: 50vw;
+    height: 10vw;
+    top: 18vw;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  /* Второе изображение */
+  .camside-view {
+    position: absolute;
+    width: 50vw;
+    height: 10vw;
+    top: 50vw;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  .third_screen_book {
+    height: 150vh;
+  }
+
+  .product-herobook {
+    margin-top: 15vw;
+    width: 95%;
+    height: 50%;
+    margin-left: 2vw;
+  }
+
+  .book-product-description {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    bottom: 26.04vw;
+  }
+
+  .bookclose-desc {
+    position: absolute;
+    left: 83vw;
+  }
+
+  .bookclose-desc img {
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20px;
+  }
+
+  .bookdesc {
+    position: absolute;
+    width: 62vw;
+    top: 68vw;
+    left: 2vw;
+  }
+
+  .bookdesc h4 {
+    font-size: 2.34vw;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .bookfront-view {
+    position: absolute;
+    width: 50vw;
+    height: 10vw;
+    top: 18vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Второе изображение */
+  .bookside-view {
+    position: absolute;
+    width: 50vw;
+    height: 10vw;
+    top: 50vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product-infobook {
+    width: 100vw;
+    height: 26vw;
+    position: absolute;
+    bottom: 0;
+  }
+  .fourth_screen_figure {
+    height: 150vh;
+  }
+
+  .product-lookfigure {
+    position: absolute;
+    top: 45vw;
+    left: 8vw;
+  }
+
+  .product-lookfigure img {
+    width: 80vw;
+    height: 50vw;
+    object-fit: contain;
+  }
+
+  .figure-product-description {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    bottom: 26.04vw;
+  }
+
+  .figureclose-desc {
+    position: absolute;
+    left: 83vw;
+  }
+
+  .figureclose-desc img {
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20px;
+  }
+
+  .figuredesc {
+    position: absolute;
+    width: 62vw;
+    top: 68vw;
+    left: 2vw;
+  }
+
+  .figuredesc h4 {
+    font-size: 2.34vw;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .figurefront-view {
+    position: absolute;
+    width: 58vw;
+    height: 15vw;
+    top: 18vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Второе изображение */
+  .figureside-view {
+    position: absolute;
+    width: 58vw;
+    height: 15vw;
+    top: 47vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

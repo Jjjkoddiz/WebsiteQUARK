@@ -1,17 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Меню toggle
   const btn = document.getElementById('menu-toggle');
   const overlay = document.getElementById('overlay');
 
   btn.addEventListener('click', () => {
     const isOpen = btn.classList.toggle('open');
     overlay.classList.toggle('show', isOpen);
-
-    // Альтернативно: менять aria-label
     btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  // Галерея изображений
   const galleryOverlay = document.querySelector('.gallery-overlay');
   const allGalleryImages = document.querySelectorAll('.gallery .img img');
 
@@ -28,17 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
     img.dataset.originalTop = originalTop;
     img.dataset.originalLeft = originalLeft;
 
-    // Сохраняем стили контейнера и изображения
     imgContainer.dataset.originalWidth = getComputedStyle(imgContainer).width;
     imgContainer.dataset.originalHeight = getComputedStyle(imgContainer).height;
     img.dataset.originalPosition = getComputedStyle(img).position;
     img.dataset.originalObjectFit = getComputedStyle(img).objectFit;
-    img.dataset.originalScale = 1; // Сохраняем исходный масштаб
+    img.dataset.originalScale = 1;
 
     galleryOverlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
 
-    // Фиксируем размеры контейнера
     imgContainer.style.width = imgContainer.dataset.originalWidth;
     imgContainer.style.height = imgContainer.dataset.originalHeight;
 
@@ -51,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       zIndex: 200,
       objectFit: 'cover',
       cursor: 'zoom-out',
-      scale: 1, // Устанавливаем исходный масштаб
+      scale: 1,
     });
     img.classList.add('active');
 
@@ -59,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 0.5,
       top: '50%',
       left: '50%',
-      scale: 4, // Увеличиваем масштаб во время анимации
+      scale: 4,
       xPercent: -50,
       yPercent: -50,
       objectFit: 'contain',
@@ -76,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const originalPosition = img.dataset.originalPosition;
     const originalObjectFit = img.dataset.originalObjectFit;
-    const originalScale = parseFloat(img.dataset.originalScale); // Получаем исходный масштаб
+    const originalScale = parseFloat(img.dataset.originalScale);
 
     gsap.to(img, {
       duration: 0.5,
       top: originalTop,
       left: originalLeft,
-      scale: originalScale, // Возвращаем к исходному масштабу
+      scale: originalScale,
       xPercent: 0,
       yPercent: 0,
       objectFit: originalObjectFit,
@@ -92,16 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryOverlay.style.display = 'none';
         document.body.style.overflow = 'auto';
 
-        // Восстанавливаем стили контейнера
         imgContainer.style.width = imgContainer.dataset.originalWidth;
         imgContainer.style.height = imgContainer.dataset.originalHeight;
 
-        // Явно устанавливаем исходные стили изображения
         img.style.position = originalPosition;
         img.style.top = '';
         img.style.left = '';
-        img.style.width = ''; // Удаляем inline width
-        img.style.height = ''; // Удаляем inline height
+        img.style.width = '';
+        img.style.height = '';
       },
     });
   }

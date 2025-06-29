@@ -1,17 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Меню-бургер
   const btn = document.getElementById('menu-toggle');
   const overlay = document.getElementById('overlay');
 
   btn.addEventListener('click', () => {
     const isOpen = btn.classList.toggle('open');
     overlay.classList.toggle('show', isOpen);
-
-    // Альтернативно: менять aria-label
     btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
   // Обработчики для счетчиков категорий
   document.querySelectorAll('.category-controls').forEach((controls) => {
     const minusBtn = controls.querySelector('.control-button:first-child');
@@ -141,16 +138,16 @@ document.addEventListener('DOMContentLoaded', function () {
     successMessage.textContent = 'Форма успешно отправлена!';
     successMessage.style.cssText = `
       position: fixed;
-      top: 20px;
+      top: 1vw;
       left: 50%;
       transform: translateX(-50%);
       background-color: #a9a9a9;
       color: white;
-      padding: 15px 30px;
+      padding: 0.65vw 0.65vw;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       z-index: 1000;
-      font-size: 1vw;
+      font-size: 3vw;
       font-family: 'HelveticaNeueCyr-Roman';
       letter-spacing: 0.1vw;
     `;
