@@ -365,6 +365,10 @@ h2 {
   animation-delay: 12s;
 }
 
+.footer-button.no-cursor {
+  cursor: default;
+}
+
 @media (max-width: 1440px) {
   .logoim {
     width: 60px;

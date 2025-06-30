@@ -41,6 +41,7 @@ body {
   display: block;
   max-width: 100%;
   transition: none;
+  cursor: pointer;
 }
 
 .row,
@@ -221,6 +222,10 @@ footer {
 
 .footer-button.with-arrow:hover .link-arrow2 {
   transform: translateX(0.3vw);
+}
+
+.footer-button.no-cursor {
+  cursor: default;
 }
 
 @media (max-width: 1440px) {
