@@ -469,6 +469,15 @@ footer {
   .control-button {
     width: 3vw;
     height: 3vw;
+    border: 2px solid #eeeeee;
+    border-radius: 20%;
+    color: #eeeeee;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
   }
 
   .category-count {
@@ -599,5 +608,52 @@ footer {
   .footer-buttons > *:nth-child(4) {
     margin-right: 0vw;
     margin-top: 0vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .site-header {
+    padding: 20px 20px;
+  }
+  .category-row {
+    margin-bottom: 1.5vw;
+    width: 70vw;
+  }
+
+  .category-name {
+    width: 60vw;
+    font-size: 5vw;
+  }
+
+  .category-price {
+    width: 10vw;
+    margin-right: 10vw;
+    font-size: 5vw;
+  }
+
+  .control-button {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .category-count {
+    font-size: 4vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .checkbox-container {
+    margin-top: 5vw;
+  }
+
+  .checkbox-container h4 {
+    font-size: 2.2vw;
+    width: 44vw;
+  }
+
+  .checkbox-container input[type='checkbox'] {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 2vw;
   }
 }

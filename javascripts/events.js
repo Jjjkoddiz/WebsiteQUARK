@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
 
-  // Галерея изображений
   const galleryOverlay = document.querySelector('.gallery-overlay');
   const allGalleryImages = document.querySelectorAll('.gallery .img img');
 
@@ -51,11 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     img.classList.add('active');
 
+    // Определяем масштаб в зависимости от ширины экрана
+    const screenWidth = window.innerWidth;
+    let scaleFactor = 4; // Значение по умолчанию для больших экранов
+
+    if (screenWidth <= 450) {
+      scaleFactor = 2.5; // Очень маленькое увеличение для экранов 450px и меньше
+    } else if (screenWidth <= 768) {
+      scaleFactor = 1.5; // Меньший масштаб для экранов 768px и меньше
+    } else if (screenWidth <= 992 && screenWidth > 768) {
+      scaleFactor = 1.5;
+    }
+
     gsap.to(img, {
       duration: 0.5,
       top: '50%',
       left: '50%',
-      scale: 4,
+      scale: scaleFactor,
       xPercent: -50,
       yPercent: -50,
       objectFit: 'contain',

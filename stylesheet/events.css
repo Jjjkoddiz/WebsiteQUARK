@@ -402,6 +402,12 @@ footer {
 }
 
 @media (max-width: 450px) {
+  .site-header {
+    padding: 20px 20px;
+  }
+  .screen {
+    height: 250vh;
+  }
   .img {
     width: calc(160 / 450 * 100vw);
     height: calc(240 / 450 * 100vw);
@@ -409,50 +415,50 @@ footer {
   /* Ряд 1 */
   .row:nth-child(1) {
     top: calc(170 / 450 * 100vw);
-    left: calc(36 / 450 * 100vw);
+    left: calc(40 / 450 * 100vw);
   }
 
   .row:nth-child(1) .img:nth-child(2) {
-    margin-left: calc(36 / 450 * 100vw);
+    margin-left: calc(40 / 450 * 100vw);
   }
 
   /* Ряд 2 */
   .row:nth-child(2) {
-    top: calc(677 / 450 * 100vw);
-    left: calc(36 / 450 * 100vw);
+    top: calc(477 / 450 * 100vw);
+    left: calc(40 / 450 * 100vw);
   }
 
   .row:nth-child(2) .img:nth-child(2) {
-    margin-left: calc(22 / 450 * 100vw);
+    margin-left: calc(40 / 450 * 100vw);
   }
 
   /* Ряд 3 */
   .row:nth-child(3) {
-    top: calc(1184 / 450 * 100vw);
-    left: calc(36 / 450 * 100vw);
+    top: calc(784 / 450 * 100vw);
+    left: calc(40 / 450 * 100vw);
   }
 
   .row:nth-child(3) .img:nth-child(2) {
-    margin-left: calc(22 / 450 * 100vw);
+    margin-left: calc(40 / 450 * 100vw);
   }
 
   /* Ряд 4 */
   .row:nth-child(4) {
-    top: calc(1691 / 450 * 100vw);
-    left: calc(36 / 450 * 100vw);
+    top: calc(1091 / 450 * 100vw);
+    left: calc(40 / 450 * 100vw);
   }
 
   .row:nth-child(4) .img:nth-child(2) {
-    margin-left: calc(22 / 450 * 100vw);
+    margin-left: calc(40 / 450 * 100vw);
   }
 
   /* Ряд 5 */
   .row:nth-child(5) {
-    top: calc(2198 / 450 * 100vw);
-    left: calc(36 / 450 * 100vw);
+    top: calc(1398 / 450 * 100vw);
+    left: calc(40 / 450 * 100vw);
   }
 
   .row:nth-child(5) .img:nth-child(2) {
-    margin-left: calc(22 / 450 * 100vw);
+    margin-left: calc(40 / 450 * 100vw);
   }
 }

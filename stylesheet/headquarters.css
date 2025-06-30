@@ -384,10 +384,6 @@ h2 {
   .line {
     height: 4px;
   }
-
-  .text-container {
-    font-size: 1.5vw;
-  }
 }
 
 @media (max-width: 1280px) {
@@ -409,10 +405,6 @@ h2 {
   .line {
     height: 4px;
   }
-
-  .text-container {
-    font-size: 1.5vw;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -433,10 +425,6 @@ h2 {
 
   .line {
     height: 4px;
-  }
-
-  .text-container {
-    font-size: 1.5vw;
   }
 }
 
@@ -770,5 +758,137 @@ h2 {
   .footer-buttons > *:nth-child(4) {
     margin-right: 0vw;
     margin-top: 0vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .logoim {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .line {
+    height: 3px;
+    width: 90%;
+    margin-left: 0.2vw;
+  }
+
+  .site-header {
+    padding: 20px 20px;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  .teaser_screen {
+    min-height: 100vh;
+  }
+
+  .teasertext {
+    margin-top: 50vw;
+    margin-left: 9vw;
+  }
+
+  .second-screen {
+    height: 120vh;
+  }
+
+  .headcontainer {
+    left: 3vw;
+    top: 10vw;
+    width: 95vw;
+    height: 80vw;
+  }
+
+  .headcontainer img {
+    width: 98%;
+    height: 95%;
+    display: block;
+  }
+
+  .text-box {
+    left: 5vw;
+    top: 110vw;
+    width: 50vw;
+  }
+
+  .text-box h3 {
+    font-size: 5vw;
+    margin-bottom: 2vw;
+  }
+
+  h4 {
+    font-size: 2.2vw;
+  }
+
+  .tooltip .line {
+    width: 0.4vw;
+  }
+
+  .point-container[data-point='1'] .tooltip {
+    bottom: 38vw;
+    left: 60%;
+  }
+
+  .point-container[data-point='1'] .tooltip h4 {
+    margin-left: 6vw;
+  }
+
+  .point-container[data-point='2'] .tooltip {
+    top: 52vw;
+    left: 80%;
+  }
+
+  .point-container[data-point='2'] .tooltip h4 {
+    margin-left: 6vw;
+  }
+
+  .point-container[data-point='3'] .tooltip h4 {
+    margin-bottom: 0.5vw;
+    margin-left: 8vw;
+  }
+
+  .point-container[data-point='4'] .tooltip h4 {
+    margin-top: -1vw;
+    margin-left: 12.5vw;
+  }
+
+  .point-container[data-point='5'] .tooltip h4 {
+    margin-bottom: 0.5vw;
+    margin-left: 18.5vw;
+  }
+
+  .point-container[data-point='6'] .tooltip h4 {
+    margin-top: 0.5vw;
+    margin-left: 9vw;
+  }
+
+  .point-container[data-point='7'] .tooltip h4 {
+    margin-top: 0.5vw;
+    margin-left: 11vw;
+  }
+
+  .point-container[data-point='8'] .tooltip h4 {
+    margin-top: 0.5vw;
+    margin-left: 5vw;
+  }
+
+  .third_screen {
+    height: 110vh;
+  }
+
+  .fourth_screen {
+    height: 90vh;
   }
 }
